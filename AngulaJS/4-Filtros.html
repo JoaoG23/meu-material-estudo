@@ -68,10 +68,21 @@ Filtros
 
 
             $scope.adicionarContato = function (contato) {
+                //contato.data = new date();
                 $scope.contatos.push(angular.copy(contato));
-                // $http.post(url + "/contatoAdicionar").then(( data ) => {
-                //     console.log(data);
-                // });
+                $http.post(url + "/contatoAdicionar").then(( data ) => {
+                    
+                    
+                    console.log(contato);
+                    console.log(data.data);
+
+                    let newOpe = data.data;
+                    $scope.contato = newOpe;
+
+
+                    
+                    
+                });
                 
                 delete $scope.contato;
                 $scope.contatoForm.$setPristine();

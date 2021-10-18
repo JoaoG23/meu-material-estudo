@@ -169,34 +169,39 @@ console.log("Acabou")*/
 
 //var aluno = new Array("João","Maria","Borges","net");
 
-//var alunos = ["Batista","Caisa","Mourele","Rita"]
-//console.log(aluno.length);
+// let alunos = [
+//                 {nome:"Elsa", nota:90},
+//                 {nome:"Lorenso", nota:142},
+//                 {nome:"Camila", nota:45},
+//                 {nome:"Jorge", nota:21}
+//             ];
+//console.log(alunos.length);
 
-//for ( var cont = 0; cont < alunos.length; cont++){
-//console.log(alunos[cont]);
-//}
+// for ( var cont = 0; cont < alunos.length; cont++){
+// console.log(alunos[cont]);
+// }
 
-/*for(var cont in alunos){ //um contador dentro de alunos
-    console.log(cont);
-}*/
-/*for (var cont of alunos){//Pega a variável dentro deleou seja o nome dos alunos dentro do vetor!
-    console.log(cont);
-}*/
+// for(var cont in alunos){ //um contador dentro de alunos
+//     console.log(cont);
+// }
+// for (var cont of alunos){//Pega a variável dentro deleou seja o nome dos alunos dentro do vetor!
+//     console.log(cont);
+// }
 
 
 // 13 - Funções
 
-/*function media(n1,n2){
-var nota1 = n1; 
-var nota2 = n2;
-var media = (nota1 + nota2) / 2;
-return media;
+// function media(n1,n2){
+// var nota1 = n1; 
+// var nota2 = n2;
+// var media = (nota1 + nota2) / 2;
+// return media;
 
-}
-var resul1 = media(6,8);
-var resul2 = media(5,8);
+// }
+// var resul1 = media(6,8);
+// var resul2 = media(5,8);
 
-console.log(resul1 +" E "+ resul2);*/
+// console.log(resul1 +" E "+ resul2);
 
 /*var prova = function(n1,n2){
     return (n1 + n2) /2;
@@ -242,11 +247,11 @@ for( cont = 0; cont < num1; cont++ ){
     console.log(cont)
 }
 console.log("Terminou")*/
-/*var cont = parseInt(prompt("Qual o numero"))
-while(cont < 150){
-    cont++;
-    console.log(cont);
-}*/
+// var cont = parseInt(prompt("Qual o numero"))
+// while(cont < 150){
+//     cont++;
+//     console.log(cont);
+// }
 //Exercício 1.2
 //Faça um programa que leia 3 números e exiba-os na tela.
 /*var index = 1
@@ -492,22 +497,22 @@ console.log(produto.por());
 // }
 //Segunda Maneira de Instancia um Objeto criar um objeto como variavel
 
-function aluno(nome, n1, n2) {
-    this.nome = nome;
-    this.nota1 = n1;
-    this.nota2 = n2;
+// function aluno(nome, n1, n2) {
+//     this.nome = nome;
+//     this.nota1 = n1;
+//     this.nota2 = n2;
 
-    this.media = function () {
-        return (this.nota1 + this.nota2) / 2
-    }
-}
+//     this.media = function () {
+//         return (this.nota1 + this.nota2) / 2
+//     }
+// }
 
-var a = new aluno("Jorge Santos Gama", 56, 98);
-var b = new aluno("Carlos Machado", 76, 90);
+// var a = new aluno("Jorge Santos Gama", 56, 98);
+// var b = new aluno("Carlos Machado", 76, 90);
 // console.log(b)
 // console.log(b.media())
 
-//- Exercicio Criando uma lista de Estoque //
+// //- Exercicio Criando uma lista de Estoque //
 // function add_produto (nome,peso,valor,quant){
 //     return{
 //         nome:nome,
@@ -519,12 +524,18 @@ var b = new aluno("Carlos Machado", 76, 90);
 //         }
 //     }
 // }
-// var estoque = [
+// let estoque = [
 //     add_produto("Tablets",0.5,156.50,1200),
 //     add_produto("Smartphone",0.5,120.50,670),
 //     add_produto("Iphone",0.5,200.50,34),
 //     add_produto("Headphone",0.5,90.50,130),
-// ]
+// ];
+
+// let lista = document.getElementById("listas");
+// console.log(lista);
+// estoque.forEach(function(produto){
+    
+// });
 // var lo = estoque;
 
 // for(lo of estoque){
@@ -553,15 +564,15 @@ var b = new aluno("Carlos Machado", 76, 90);
 
 
 // 18 - Var , Let , const
-var num1 = 6;
-let num2 = 5;
-const num3 = 34; 
+// var num1 = 6;
+// let num2 = 5;
+// const num3 = 34; 
 
-num3 = 32 //Uma constrante não recebe numero outra variável //push) para por um novo numero em um array
+// num3 = 32 //Uma constrante não recebe numero outra variável //push) para por um novo numero em um array
 
-console.log(num1);
-console.log(num2);
-console.log(num3);
+// console.log(num1);
+// console.log(num2);
+// console.log(num3);
 
 //var e uma variável global Acessivel a qualquer canto Código 
 //let somente dentro de um escopo local![]

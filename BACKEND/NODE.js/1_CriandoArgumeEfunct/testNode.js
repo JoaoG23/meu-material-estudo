@@ -6,7 +6,7 @@
 
 // Os dois caminho dos modulos para selecionamento de funções diferentes.
 
-let calc = require("./NODE.js/calc2Funct")
+let calc = require("./calc2Funct")
 
 //------ Declarando argumentos
 let args = process.argv.slice(2);
@@ -16,7 +16,7 @@ let b = Number(args[2]);
 let c = "";
 
 
-if ( args[0] == "s"){document
+if ( args[0] == "s"){
 
     c = calc.soma(a,b);
 

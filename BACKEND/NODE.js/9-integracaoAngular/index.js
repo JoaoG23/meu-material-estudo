@@ -19,9 +19,19 @@ app.get("/operadoras", bodyParserJson,(req, resp) => {
 });
 
 app.post("/contatoAdicionar",bodyParserJson , (req ,resp) => {
-    // resp.json("Testando Adicionar ...")
-    resp.json(contatos.adicionarContatos());
-})
+    
+    let acrescContato = req.body.contato;
+    // let nome = req.body.nome;
+    // let telefone = req.body.telefone;
+    contatos.adicionarContatos(contato );
+    // if(nome == "" && telefone == ""){
+        //     contatos.adicionarContatos(nome , telefone );
+    // } else{
+    //     resp.status(404);
+    //     resp.json("ERRO voce adicionou contato vazio !");
+    // }
+    resp.json("Contato Adicionado com sucesso !");
+});
 
 //___________________________
 
