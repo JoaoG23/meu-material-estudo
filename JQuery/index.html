@@ -9,7 +9,9 @@
 <body>
     <h1>Esse é o Título H1</h1>
 
-    <h1 class="titulo">Outro Título</h1>
+    <h1 onclick="sumir()" class="titulo">Outro Título</h1>
+    <h3 class="titulo">Outro Titulo 2</h3>
+    <div class="titulo">Outro DIV</div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 //    console.log( $("h1"))
@@ -55,9 +57,13 @@
 //Será que dá pra fazer com JS isso?
 
 //Vamos lá----------------
-document.querySelectorAll(".titulo").forEach(elemento =>{
-    elemento.style.display =  "none";
-})
+function sumir(){
+    
+    document.querySelectorAll(".titulo").forEach(elemento =>{
+        elemento.style.display =  "none";
+        elemento.style.border = "10px solid green";
+    })
+}
 </script>
 </body>
 </html>

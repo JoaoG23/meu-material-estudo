@@ -17,10 +17,8 @@ $$
 DELIMITER $$
 
 create function removeAcentuacao(comTexto varchar(50))
-
 returns varchar(50)
 BEGIN
-
 ### Substitui por sem acento
 set comTexto = replace(comTexto,'á','a'),
 	comTexto = replace(comTexto,'ã','a'),
@@ -32,7 +30,6 @@ set comTexto = replace(comTexto,'á','a'),
     comTexto = replace(comTexto,'ò','o'),
     comTexto = replace(comTexto,'õ','o'),
     comTexto = replace(comTexto,'í','i');
-    
     return comTexto;
 END
 $$
@@ -46,10 +43,14 @@ cod_grupo int ,
 primary key(id)
 ) charset utf8;*/
 
-desc produtos_padaria;
-insert into produtos_padaria values
-(default,'Soneços',10.50,1.000,0);
 
-select * from produtos_padaria;
+insert into produto values
+(default,'COCA-COLA',4.50,60,0);
+
+select * from produto;
+
+
+
+
 
 

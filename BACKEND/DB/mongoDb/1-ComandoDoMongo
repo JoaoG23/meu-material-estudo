@@ -101,7 +101,6 @@ db.users.find().sort({nome:-1})
 digite:
 db.users.updateOne({nome:"Joao"} , {$set:{email:"joao@gmail.com"}})
 
-# REVISADO SEGUNDA-FEIRA ATE AQUI 18-10
 
 17- Modifica varios documentos
 
@@ -129,6 +128,7 @@ db.users.update({nome:"Joao"},{nome:"Marcos" , senha:"55554"},{upsert:"true"})
 digite:
 db.users.updateMany({},{$rename:{"Visits":"views"}})
 
+# REVISADO SEGUNDA-FEIRA ATE AQUI 18-10
 
 
 

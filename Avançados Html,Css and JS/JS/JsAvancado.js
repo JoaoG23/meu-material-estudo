@@ -48,7 +48,7 @@ let usuarios = ["Adriano","Marcia","joao"];
 // Dentro da Promise ela tem 2 argumentos resolve,reject
 function inserirUsuarios(nome) {
     
-    let promise = new Promise(function(resolve,reject)){
+    let promise = new Promise(function(resolve,reject){
 
         setTimeout(() => { 
             usuarios.push(nome);
