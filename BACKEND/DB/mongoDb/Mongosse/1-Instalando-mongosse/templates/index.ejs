@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserindo Links</title>
+</head>
+
+<body>
+    <h1>Redirecionamento</h1>
+
+    <div>
+        <form action="/" method="POST">
+
+            <input type="text" name="titulo" placeholder="Titulo" value="<%=body.titulo%>">
+            <input type="text" name="descricao" placeholder="Descrição" value="<%=body.descricao%>">
+            <input type="text" name="url" placeholder="Digite a URL" value="<%=body.url%>">
+            <button>Salvar</button>
+        </form>
+    </div>
+    
+    <%if(error){%>
+        <h3><%=error.message%></h3>
+    <%}%>
+</body>
+
+</html>
