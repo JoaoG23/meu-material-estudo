@@ -50,8 +50,8 @@ db.users.insertOne({nome:"Joao" , senha:"1234", email:"joao@gmail.com"})
 10 - Mais documento de uma só vez
 crie um Array.
 digite:
-> db.users.insertMany([{nome:"josefa"}, {nome:"Carla"}, {nome:"Doceineia"}])
 
+db.users.insertMany([{nome:"josefa"}, {nome:"Carla"}, {nome:"Doceineia"}])
 
 
 11- Selecionando documentos 
@@ -108,9 +108,12 @@ Digite:
 db.users.updateMany({},{$set:{class:"Logicas"}})
 
 18- Deletas varios documentos
-
 Digite:
 db.users.updateMany({},{$unset:{class:""}})
+
+18- Deletar somente um Documento
+
+db.peoples.remove({yourName:"Teste JSON "},1)
 
 19- Muda o documento como um todos
 Digite:

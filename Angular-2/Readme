@@ -35,3 +35,22 @@ DIRETIVA-----------------------
 
 Ele modifica elementos DOM 
 um componente tambem pode ser uma diretiva.
+
+AULA 2 ---------MODULOS-------------------------
+
+OS MODULOS SERVEM PARA SEPARAR O CODIGO POR PARTES 
+
+    Para criar um movo modulo 
+        Digite: ng -> iniciar o comamdo 
+                g -> generate
+                m -> modulo
+                'nome do modulo'
+
+        Digite o comando abaixo:
+         ng g m cursos
+
+----PARA CRIAR COMPONENT -------
+ Digite o comando abaixo:
+ 
+    ng g m cursos
+

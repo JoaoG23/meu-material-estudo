@@ -1,0 +1,77 @@
+
+<html>
+    <head>
+        <title>Converter uma Tabela para PDF usando JavaScript</title>
+        <style>
+            table
+            {
+                width: 300px;
+                font: 17px Calibri;
+            }
+            table, th, td 
+            {
+                border: solid 1px #DDD;
+                border-collapse: collapse;
+                padding: 2px 3px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <table id="tabela"> 
+                <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Cargo</th>
+                </tr>
+                <tr>
+                    <td>Macoratti</td>
+                    <td>55</td>
+                    <td>Programador</td>
+                </tr>
+                <tr>
+                    <td>Jefferson</td>
+                    <td>26</td>
+                    <td>Engenheiro</td>
+                </tr>
+                <tr>
+                    <td>Janice</td>
+                    <td>24</td>
+                    <td>Web Designer</td>
+                </tr>
+            </table>
+        </div>
+        
+            <button onclick="CriaPDF()">Abrir</button>
+            <button onclick="testeLog()">teste</button>
+
+     
+    <script>
+
+        let tabela = document.getElementById('tabela');
+        function testeLog(){
+            console.log(tabela);
+        }
+        function CriaPDF() {
+        const myWindow = window.open("", "MsgWindow", "width=600,height=900");
+      const Stilo = `
+      <style>
+        body{
+            background-color:red;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px; 
+            color: rgb(226, 224, 213);
+        }
+        img{
+          width:150px;
+          border-radius: 10px;
+        }
+      </style>`
+        myWindow.document.write(Stilo);
+      myWindow.document.write("<p>This is 'MsgWindow'. I am 200px wide and 100px tall!</p>");
+    }              
+        
+    </script>
+    </body>
+    </html>

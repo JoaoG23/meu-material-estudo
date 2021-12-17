@@ -3,6 +3,22 @@
 // o que deve ser feito. = "A Lógica de Negocio" ,
 // ou seja, aqui estará o que acontece quando essa rota é chamada.
 
+//Relebrando o que e de fato um callback = Transformar algo assincrono em sincrono
+// usuarios = [jaoa,maria]
+// inserir usuarios (carla)
+// fuction listausuarios() retorna [jaoa,maria] lista antiga menos a '(carla)'
+
+// Promise = Subistitui o callback e cria um recebe reject e reslvor
+// .then = a funcão a proxima funcão
+// .catch = recebe o erro trata o erro
+
+// Asyc await
+// Ele somente e execultado quando a promise e resolvida
+// Asyc
+
+// await = Codigo execultado quando o codigo e resolvido
+
+
 
 const Link = require("../models/Link");
 const redirect = async ( req, resp, next ) => {
@@ -58,7 +74,7 @@ const allLinks = async ( req , resp ) => {
 
     try {
         let links = await Link.find({});
-        resp.render('all', { links });
+        resp.render('all', { links });// Para rendenizar pelo servidor. EJS = 'links' variavel
         
     } catch (error) {
         resp.send(error);
@@ -70,7 +86,7 @@ const loadLink = async ( req , resp ) => {
     let id = req.params.id;
     try {
         let link = await Link.findById(id);
-        resp.render('edit' , { error:false , body: link })
+        resp.render('edit' , { error:false , body: link })// Para rendenizar pelo servidor. EJS
         
     } catch (error) {
         resp.send(error);

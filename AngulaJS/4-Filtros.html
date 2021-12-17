@@ -68,7 +68,7 @@ Filtros
 
 
             $scope.adicionarContato = function (contato) {
-                //contato.data = new date();
+                contato.data = new date();
                 $scope.contatos.push(angular.copy(contato));
                 $http.post(url + "/contatoAdicionar").then(( data ) => {
                     
