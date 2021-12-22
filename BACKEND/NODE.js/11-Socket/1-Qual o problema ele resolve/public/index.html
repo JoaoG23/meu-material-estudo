@@ -5,34 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>o que o socket io resolve</title>
+    <title>Teste Socketio</title>
 </head>
 
 <body>
-    <div id="list">
-
+    <div id="main">
     </div>
-    <script> 
-    // QUANDO O FAZEMOS ISSO PARA ATUALIZAR OS REGISTRO, 
-    // Dependo do tanto de requisicao recebermos simularios um ataque ao nosso servidor deixando a aplicacao sem perfomace.
-        setInterval(() => {
 
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    const socket = io('http://localhost:3000');
 
-            fetch('/list')
-                .then(resp => resp.json())
-                .then(data => {
-                    let list = "<ul>"
-                    data.map(item => {
-                        list += `<li>${item}</li>`
-                    })
-                    list += "</ul>"
-                    document.querySelector("#list").innerHTML = list;
-                }).catch(erro => {
-                    console.log(erro);
-                });
+    // Comunicando com o Back end
+    socket.on('hello', (data) =>{
+        // Recebendo mensagem
+        console.log(data.msg);
 
-        }, 1000);
-    </script>
+        // Enviando mgs para o back
+        socket.emit('hello_client_response',{msg:"Tudo certo"});
+    });
+</script>
 </body>
 
 </html>
