@@ -14,15 +14,23 @@
 
 <script src="/socket.io/socket.io.js"></script>
 <script>
+    // const socket = io('http://localhost:3000');
+
+    // // Comunicando com o Back end
+    // socket.on('hello', (data) =>{
+    //     // Recebendo mensagem
+    //     console.log(data.msg);
+
+    //     // Enviando mgs para o back
+    //     socket.emit('hello_client_response',{msg:"Tudo certo"});
+    // });
+
+    //********* 2 Mandando mensagem para todos **************
     const socket = io('http://localhost:3000');
 
-    // Comunicando com o Back end
     socket.on('hello', (data) =>{
-        // Recebendo mensagem
+     
         console.log(data.msg);
-
-        // Enviando mgs para o back
-        socket.emit('hello_client_response',{msg:"Tudo certo"});
     });
 </script>
 </body>

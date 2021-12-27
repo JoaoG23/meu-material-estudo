@@ -7,8 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="dados">
-        <table> 
+    <div>
+        <table id="dados"> 
             <tr>
                 <th>Nome</th>
                 <th>Idade</th>
@@ -32,15 +32,16 @@
         </table>
     </div>
     <button onclick="relatorioPdf()">Relatorio PDF</button>
-    <script>
+    <script type="text/javascript">
+
     function relatorioPdf(){
-        const puxaDados = document.getElementById('dados').innerHTML;
-        let janelaAberta = window.open('','','width= 700,height= 600');
-        // janelaAberta.document.write(`<html><head>`);
-        // janelaAberta.document.write(`<title>PFD</title></head>`);
-        // janelaAberta.document.write(`<body>`);    
+        let puxaDados = document.getElementById('dados').innerHTML;
+        let janelaAberta = window.open('','teste','width= 700,height= 600');
+        janelaAberta.document.write("<html><head>");
+        janelaAberta.document.write("<title>PFD</title></head>");
+        janelaAberta.document.write("<body>");    
         // janelaAberta.document.write(puxaDados);    
-        // janelaAberta.document.write(`</body></html>`);    
+        // janelaAberta.document.write("</body></html>");    
         // janelaAberta.document.close();
         // janelaAberta.print();
     }     
