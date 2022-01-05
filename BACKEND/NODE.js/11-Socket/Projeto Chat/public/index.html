@@ -8,13 +8,30 @@
     <title>Chat</title>
 </head>
 <body>
-    <div id="messages">
+    <main class="quadro debug">
+    
+        <form class="formUsuario debug" name="user_form_name" id="user_form">
+            
+                <p>Usuario </p>
+                <input class="textInput" name="user" id="user" type="text">
+            
+            <button class="btn" type="submit">Logar ↪</button>
+        </form>
+        <div id="idenficacaoUsuario"> 
 
-    </div>
-    <form>
-        <input type="text">
-        <button type="submit">Enviar</button>
-    </form>
+        </div>
+        <div id="messages">
+    
+        </div>
+        <form class="formMensagens debug" name="message_form_name" id="message_form">
+            <div class="textInput">
+                <input name="msg" id="message" type="text">
+                <button class="btn" type="submit">▶</button>
+            </div>
+        </form>
+    </main>
+    <!-- ---- Como voce importou ele antes terá acesso dentro do Chat -->
+    <script src="/socket.io/socket.io.js"></script>
     <script src="./chat.js"></script>
-</body>
+</body>  
 </html>
