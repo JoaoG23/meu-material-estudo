@@ -1,9 +1,16 @@
 /* ----- Config Gerais ----- */
 html{
+    padding: 0px;
+    margin: 0px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-
+:root{
+    --tamanhoPadrao: 80%;
+    --cor-inputs:rgb(217, 240, 242);
+    --cor-navBar:tomato;
+    --cor-quadro-messagens()
+}
 
 /* ------Corpo------- */
 
@@ -11,7 +18,7 @@ html{
     display: flex;
     width: 100%;
     justify-content: center;
-    height: 700px;
+    height: 600px;
 
 
 }
@@ -22,11 +29,15 @@ html{
     
 }
 .formMensagens{
-    width: 70%;
+    width: 67%;
     display: flex;
     flex-direction: column;
     justify-content:flex-end;
     align-items: flex-end;
+
+    border-radius: 30px;
+    margin: 20px;
+    box-shadow: 6px 6px 16px rgb(204, 204, 204,0.7);
     
 }
 .textInput{
@@ -37,8 +48,31 @@ html{
 input{
     width: 90%;
 }
-
+#messages{
+    width: 60%;
+    height: 60%;
+    background-color: tomato;
+    position: absolute;
+    z-index: 1;
+    left: 35%;
+    top:100px;
+    
+}
 .debug{
     border: 2px solid green;
+}
+
+.btn{
+    background-color: var(--cor-navBar);
+    color: rgb(255, 244, 244);
+    border: none;
+    padding: 15px;
+    border-radius: 45%;
+}
+
+.navbar{
+    background-color: var(--cor-navBar);
+
+    height: 60px;
 }
 
