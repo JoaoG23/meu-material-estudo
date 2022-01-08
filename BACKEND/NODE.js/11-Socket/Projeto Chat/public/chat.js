@@ -43,12 +43,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Criando USUARIO da mensagem 
     // Faz a mesma coisa de Cima porem sem 
     const userform = document.querySelector('#user_form');
+    //const nameUserIndetify = document.querySelector('#idenficacaoUsuario')
+    
 
     userform.addEventListener('submit', (e) => { 
         e.preventDefault();
         
         user = document.forms['user_form_name']['user'].value ;
         userform.parentNode.removeChild(userform); // REMOVE USERFORM DA TELA
+        //nameUserIndetify.innerHTML = `<h1>${user}</h1>`;
         
     });
 });
