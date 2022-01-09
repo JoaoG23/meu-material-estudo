@@ -11,9 +11,27 @@ socket.on('update_messages', (messages) => {
 function updateMessagesOnScreen(messages) {
     const div_messages = document.querySelector('#messages'); 
 
+    // let list_messages = '<ul>'
+    // messages.forEach(message => {
+    //     list_messages += `<li><b>${ message.user }</b>: ${ message.msg }</li>`
+    // });
+
+    // list_messages += '</ul>'
+
     let list_messages = '<ul>'
     messages.forEach(message => {
-        list_messages += `<li>${ message.user }: ${ message.msg }</li>`
+        if (message.user == user) {
+            
+            list_messages += `
+            <div align="right" class="mensagensDoUsuario-local">
+                <li><b>${ message.user }</b>: ${ message.msg }</li>
+            </div>`;
+        } else {
+            list_messages += `
+            <div>
+                <li><b>${ message.user }</b>: ${ message.msg }</li>
+            </div>`;
+        }
     });
 
     list_messages += '</ul>'
@@ -43,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Criando USUARIO da mensagem 
     // Faz a mesma coisa de Cima porem sem 
     const userform = document.querySelector('#user_form');
-    //const nameUserIndetify = document.querySelector('#idenficacaoUsuario')
+    const userDefinition = document.querySelector('#idenficacaoUsuario');
     
 
     userform.addEventListener('submit', (e) => { 
@@ -51,7 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         user = document.forms['user_form_name']['user'].value ;
         userform.parentNode.removeChild(userform); // REMOVE USERFORM DA TELA
-        //nameUserIndetify.innerHTML = `<h1>${user}</h1>`;
-        
+        userDefinition.innerHTML = `<h3 class="nomeUsuario">Olá! ${user}</h3>`;
     });
 });
