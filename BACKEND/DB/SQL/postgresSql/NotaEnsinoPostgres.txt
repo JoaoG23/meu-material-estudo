@@ -78,3 +78,7 @@ COMO RESOLVER :
 https://pganalyze.com/docs/log-insights/app-errors/U137
 https://pt.stackoverflow.com/questions/321194/como-definir-o-set-client-encoding-utf8-de-forma-permanente
 https://stackoverflow.com/questions/18297980/pg-copy-error-invalid-input-syntax-for-integer
+
+Informações importantes -------------------------------------------------
+
+https://pt.stackoverflow.com/questions/101672/tem-como-saber-a-hora-que-um-registro-foi-adicionado-ao-banco
