@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciando com pilhas </title>
+</head>
+<body>
+    <script>
+        //--- CRIANDO CLASSES - EMPILHANDO ----
+        class Stack {
+            constructor() {
+                this.count  = 0;
+                this.itens  = {};
+
+            }
+            // Metodos
+            push(elemento) {
+                this.itens[this.count] = elemento;
+                this.count ++;
+            }
+
+            size () {
+                return this.count;
+            }
+
+            isEmpty() {
+                return this.count === 0;
+            }
+
+            pop(){
+
+                if(this.isEmpty()) {
+
+                    return undefined;
+                }
+                this.count --;
+                const resultado = this.itens[this.count];
+                delete this.itens[this.count];
+                return resultado;
+
+            }
+        }
+
+        const stack = new Stack();
+        stack.push(5);
+        stack.push(8);
+        
+        console.log(stack);
+        console.log(stack.size());
+        console.log(stack.isEmpty());
+        console.log(stack.pop());
+        
+        
+    </script>
+</body>
+</html>
