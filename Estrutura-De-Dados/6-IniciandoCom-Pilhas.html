@@ -41,17 +41,51 @@
                 return resultado;
 
             }
+
+            clear(){
+                this.itens = {};
+                this.count = 0;
+                // OUTRO METODO ----------_----
+
+                // while(!this.isEmpty()){
+                //     this.pop();
+                // }
+            }
+            
+            toString(){
+                if ( this.isEmpty() ) {
+
+                    return '';
+                }
+
+                let objetoString = `${this.itens[0]}`;
+                // for (let i = 1; i < this.count; i++) {
+                //     objetoString = `${objetoString},${this.itens[i]}`;
+                    
+                // }
+                // ----- TENTANDO OUTRO MODO -------
+
+                objetoString.forEach( => {
+                    // let i = 1;
+                    objetoString = `${objetoString},${this.itens}`
+                });
+                return objetoString;
+            }
         }
 
         const stack = new Stack();
         stack.push(5);
-        stack.push(8);
+        stack.push(9);
         
-        console.log(stack);
-        console.log(stack.size());
-        console.log(stack.isEmpty());
-        console.log(stack.pop());
+        console.log("Essa e o seu objeto : ", stack);
+        console.log("Esse e o tamanho dele : ", stack.size());
+        console.log("Verifica se o seu objeto e vazio : ", stack.isEmpty());
+        //console.log("Elimina o ultimo do item a entrar na Pilha : ", stack.pop());
+        //console.log("Limpa todo o objeto : ", stack.clear());
+        console.log("Verifica se Objeto esta vazio após a exclusão  : ", stack.isEmpty());
+        console.log(stack.toString());
         
+
         
     </script>
 </body>
