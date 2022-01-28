@@ -15,6 +15,7 @@ function handleClick(event) {
     handleMove(position);
     updateSquares();
 }
+// rELEBRAND MVC
 
 function updateSquares(){
     let squares =  document.querySelectorAll(".square");
