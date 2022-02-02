@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando Filas</title>
+</head>
+<body>
+
+
+
+    <script>
+        class Queue {
+            constructor(){
+                this.contador = 0;
+                this.menorContador = 0;
+                this.items = {};
+            }
+            
+            enqueueAddFinalFila( elemento ) {
+                this.items[this.contador] = elemento;
+                this.contador ++;
+            }
+            
+            dequeueRemovePrimeiroFila() {
+                if (this == "") {
+                    return undefined
+                }
+                const RESULTADO = this.items[this.menorContador];
+                delete this.items[this.menorContador];
+                this.menorContador++;
+                return RESULTADO;
+            }
+        }
+        const FILA = new Queue;
+        
+        console.log(FILA.enqueueAddFinalFila('NovoItem1'));
+        console.log(FILA.enqueueAddFinalFila('NovoItem2'));
+        console.log(FILA.enqueueAddFinalFila('NovoItem3'));
+        console.log(FILA.dequeueRemovePrimeiroFila());
+        console.log(FILA);
+
+
+    </script>
+</body>
+</html>
