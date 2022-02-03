@@ -23,8 +23,9 @@
                 this.contador ++;
             }
             
+            
             dequeueRemovePrimeiroFila() {
-                if (this == "") {
+                if (this == '') {
                     return undefined
                 }
                 const RESULTADO = this.items[this.menorContador];
@@ -32,13 +33,39 @@
                 this.menorContador++;
                 return RESULTADO;
             }
+            
+            tamanho(){
+                return this.contador - this.menorContador; 
+            }
+
+            eVazio(){
+                return this.contador - this.menorContador === 0; 
+            }
+
+            esvazia(){
+                this.items = {}
+                this.contador = 0;
+                this.menorContador =  0;
+            }
+            
+            paraCaracteres(){
+                if (this.eVazio()) {
+                    return '';
+                }
+
+                let objSt
+                // Termine por aqui //
+            }
         }
         const FILA = new Queue;
-        
+        console.log(FILA)
         console.log(FILA.enqueueAddFinalFila('NovoItem1'));
         console.log(FILA.enqueueAddFinalFila('NovoItem2'));
         console.log(FILA.enqueueAddFinalFila('NovoItem3'));
         console.log(FILA.dequeueRemovePrimeiroFila());
+        console.log(FILA.eVazio());
+        console.log(FILA.tamanho());
+        console.log(FILA.esvazia());
         console.log(FILA);
 
 
