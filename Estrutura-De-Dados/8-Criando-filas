@@ -34,7 +34,7 @@
                 return RESULTADO;
             }
             
-            tamanho(){
+            verTamanho(){
                 return this.contador - this.menorContador; 
             }
 
@@ -53,21 +53,37 @@
                     return '';
                 }
 
-                let objSt
-                // Termine por aqui //
+                let objetoCaracteres = `${this.items[this.menorContador]}`;
+                for ( let i = this.menorContador + 1; i < this.contador; i++ ) {
+
+                    objetoCaracteres = `${objetoCaracteres},${this.items[i]}`;
+                    
+                }
+                return objetoCaracteres;
+                
             }
         }
         const FILA = new Queue;
+        const QUEUE = new Queue;
+    
         console.log(FILA)
         console.log(FILA.enqueueAddFinalFila('NovoItem1'));
         console.log(FILA.enqueueAddFinalFila('NovoItem2'));
         console.log(FILA.enqueueAddFinalFila('NovoItem3'));
         console.log(FILA.dequeueRemovePrimeiroFila());
-        console.log(FILA.eVazio());
-        console.log(FILA.tamanho());
-        console.log(FILA.esvazia());
-        console.log(FILA);
-
+        
+        // console.log(FILA.eVazio());
+        // console.log(FILA.verTamanho());
+        // console.log(FILA.esvazia());
+        console.log(FILA.paraCaracteres());
+        
+        console.log(QUEUE.enqueueAddFinalFila('Joao'));
+        console.log(QUEUE.enqueueAddFinalFila('Jose'));
+        console.log(QUEUE.enqueueAddFinalFila('Maria'));
+        console.log(QUEUE.enqueueAddFinalFila('Olegario Marciel'));
+        console.log(QUEUE.dequeueRemovePrimeiroFila());
+        console.log(QUEUE);
+        console.log(QUEUE.verTamanho());
 
     </script>
 </body>
