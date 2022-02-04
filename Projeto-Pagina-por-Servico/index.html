@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="./styles/general.css">
+</head>
+<body>
+
+<h1 id="novo" class="democlass">Hello World</h1>
+
+<p>Click the button to add a class attribute with the value of "democlass" to the h1 element.</p>
+
+<button id="bun">Try it</button>
+
+<script>
+    let btn = document.getElementById("bun");
+    let teste = document.getElementById("novo");
+    btn.onclick = () => {myFunction(teste)}
+function myFunction( elemento ) {
+    elemento.style.width = "16px";
+    elemento.style.transition = "2s";
+    elemento.style.opacity = "0.5";
+    
+    // elemento.setAttribute("class", "democlass"); 
+}
+</script>
+
+</body>
+</html>
