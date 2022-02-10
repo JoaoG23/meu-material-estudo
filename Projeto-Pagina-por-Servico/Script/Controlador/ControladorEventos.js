@@ -33,28 +33,20 @@ let dados = {
   ]
 }
 
-// var conta = {
-//   ag: '0000',
-//   banco: {
-//     cod: 033,
-//     id: 9,
-//     nome: 'Santander'
-//   }
-// }
-
-let elementoTela = document.getElementById("elementoTeste");
+let rootBody = document.getElementById("root");
 
 let btn1 = document.getElementById("btnAparecerDir");
 let btn2 = document.getElementById("btnDesaparecerDir");
 let btn3 = document.getElementById("btnAparecerEsq");
 
-
-
-let rootVariavel = document.querySelector("#root");
 let rootNavBar = document.querySelector("#rootnavbar");
 
-btn2.onclick = () => { TRANSICAO_ELEMENTOS.DiminuicaoDireita(elementoTela) }
+btn1.onclick = () => { TRANSICAO_ELEMENTOS.Aparecer_pela_direita(rootBody), TEMPLATES.formularioGenerico(rootBody) } // Add transicao + elementos na tela
+btn2.onclick = () => { TRANSICAO_ELEMENTOS.Desparecer_pela_direita(rootBody) }
 
 
-btn1.onclick = () => { TRANSICAO_ELEMENTOS.AumentoDireita(elementoTela), TEMPLATES.CaixaComBtns(elementoTela) } // Add transicao + elementos na tela
-btn3.onclick = () => { TRANSICAO_ELEMENTOS.DiminuicaoDireita(elementoTela) }
+fetch("./Script/Data/data.json")
+.then(response => {
+   return response.json();
+})
+.then(jsondata => console.log(jsondata));

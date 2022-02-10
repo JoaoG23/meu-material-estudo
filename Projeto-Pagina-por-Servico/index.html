@@ -1,44 +1,38 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
     <link rel="stylesheet" href="./styles/general.css">
 </head>
+
 <body>
     <header class="nav-bar cor-azul ">
         <h4>LogoMarca</h4>
         <ul class="itens-linha">
-            <button id="btnDesaparecerDir">Sumir</button>
-            <button id="btnAparecerDir">Aparecer</button>
-            <button id="btnAparecerEsq">Servicos</button>
-            <button id="btnDespareceEsq">Controladores</button>
-            <button id="btnAparecerSubir" >Configuracoes</button>
-            <button>Dados</button>
-            <button>Sair</button>
-            <button>Login</button>
-            
+            <li id="btnDesaparecerDir">Sumir</li>
+            <li id="btnAparecerDir">Aparecer</li>
+            <li id="btnAparecerEsq">Servicos</li>
+            <li id="btnDespareceEsq">Controladores</li>
+            <li id="btnAparecerSubir">Configuracoes</li>
+            <li>Dados</li>
+            <li>Sair</li>
+            <li>Login</li>
+
         </ul>
     </header>
-    <section id="rootnavbar">
-    </section>
-    <main>
+    <!-- <section id="rootnavbar">
+    </section> -->
+    <main class="container cor-light posicao-inicial flow-h">
+        <section id="root" class=" ">
+            <!-- --Conteudo do Corpo----- -->
+        </section>
 
     </main>
-    <div class=" flow-h">
-        
-        <h1 id="elementoTeste" class="posicao-inicial w-0">Hello World</h1>
-        
-        <p>Area de Teste para Manipulacao do DOM.</p>
-        <p>Clique nos botões abaixo para Manipulacao da div</p>
-    </div>
-    <section id="root" class="container">
-    </section>
-        
-   
-
-
-<script defer src="./Script/Servicos/Servicos.js"></script>
-<script  src="./Script/Controlador/ControladorEventos.js"></script>
+    <!-- <script type="text/javascript" src="./Script/Data/data.json"></script> -->
+    <script defer src="./Script/Servicos/Servicos.js"></script>
+    <script src="./Script/Controlador/ControladorEventos.js"></script>
 
 </body>
+
 </html>
