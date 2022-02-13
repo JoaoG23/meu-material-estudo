@@ -1,7 +1,4 @@
-//    window.onload =  () => { TEMPLATES.CriaNavBar(rootNavBar) }
-//     // document.addEventListener('load', () => { 
-//     //   TEMPLATES.CriaNavBar(rootNavBar);
-//     // });
+
 // ------ Services ------
 
 /*
@@ -14,105 +11,26 @@
 
 */
 
-const TESTES = {
 
-    TesteVariavel:( variavel ) => {
+const testeVariavel = ( variavel ) => {
 
         if (!variavel) {
 
           return 'Tem algo (ERRADO) no seu código X!';
         } else {
       
-         return 'SUA VARIAVEL: ' + variavel + ' FUNCIONOU !';
+         console.log('SUA VARIAVEL: ' + variavel + ' FUNCIONOU !');
+         console.log('E seu primeiro filho é: ' + Achar1Filho( variavel ))
           // --- Extrair o valor de dentro da variavel funcao = Achar1Filho
         }
-      },
-      
-      Achar1Filho:( pai ) => {
-        console.log(pai.children);
       }
-
-}
-const TRANSICAO_ELEMENTOS = {
-
-    Desparecer_pela_direita:( elemento  ) => {
-        // Regra Para Paginacao funcao
-        // 1 - Uma funcao pura, possivel sirva para todos elemento
-        /* 2- Transicao valores de execulsao Ex: transistion, left serao na funcao
-         e nao nao class especifica do objeto */
-    
-        elemento.style.transition = "0.4s";
-        elemento.style.opacity = "1"
-        elemento.style.position = "relative"
-    
-        elemento.style.transform = "translateX(100%)";
-        
-        // elemento.setAttribute("class", "posicao-final"); 
-    },
-    Aparecer_pela_direita:( elemento ) => {
-
-        elemento.style.transition = "0.4s";
-        elemento.style.opacity = "1"
-        elemento.style.transform = "translateX(0%)";
-          
-    },
-    
-    // ---defeito---
-    Aumento:( elemento  ) => {
-    
-        elemento.style.transition = "0.4s";
-        elemento.style.opacity = "1"
-        elemento.style.width = "100%";
-        
-    
-    },
-
-    Diminuicao:( elemento  ) => {
-
-    
-        elemento.style.transition = "0.4s";
-        elemento.style.opacity = "0"
-        elemento.style.width = "0%";
-        
-    
-    }
+      
+const achar1Filho = ( pai ) => pai.children;
 
 
-    // AparecerEsquerda:( elemento ) => {
 
-    //     elemento.style.transition = "0.4s";
-    //     elemento.style.opacity = "1"
-    //     elemento.style.transform = "translateX(-100%)";
-          
-    // },
 
-    // DesparecerEsquerda:( elemento ) => {
-
-    //     elemento.style.transition = "0.4s";
-    //     elemento.style.opacity = "1";
-    //     elemento.style.transform = "translateX(0%)";
-          
-    // },
-    // AparecerBaixoParaCima:( elemento ) => {
-
-    //     elemento.style.transition = "0.4s";
-    //     elemento.style.opacity = "1"
-    //     elemento.style.transform = "translateY(11000wv)";
-          
-    // },
-    // DesaparecerCimaParaBaixo:( elemento ) => {
-
-    //     elemento.style.transition = "0.4s";
-    //     elemento.style.opacity = "1"
-    //     elemento.style.transform = "translateY(-100%)";
-          
-    // }
-
-}
-
-const ENTRADA_DADOS = {
-
-    Mascara:( elemento, tipoSeparador ) => {
+const mascara = ( elemento, tipoSeparador ) => {
         let elementoInput = elemento;
 
         if( elementoInput.value.length == 3 ||  elementoInput.value.length == 7 ){
@@ -123,12 +41,12 @@ const ENTRADA_DADOS = {
 
         }
     }
-}
 
 
-const TEMPLATES = {
 
-    formularioGenerico: ( root ) => {
+
+const formularioGenerico = ( root ) => {
+        
         
         let resultadoTemplate = `
         <form>
@@ -190,9 +108,9 @@ const TEMPLATES = {
         root.innerHTML = resultadoTemplate;
         
         
-    },
+    }
 
-    CriaNavBar: ( root ) => {
+const criaNavBar = ( root ) => {
         
         let resultadoTemplate = `
         `;
@@ -200,7 +118,7 @@ const TEMPLATES = {
         root.innerHTML = resultadoTemplate;
         
         
-    },
-https://www.youtube.com/watch?v=YPWl29sKFsQ
+    }
+// https://www.youtube.com/watch?v=YPWl29sKFsQ
 
-}
+
