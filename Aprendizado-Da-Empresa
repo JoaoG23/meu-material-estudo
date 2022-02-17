@@ -98,3 +98,34 @@ MariaDB [theDBName]> SOURCE C:/Users/myUserName/theDBName_data.dump
 como ----- ver todos os usuarios
 
 SELECT * FROM mysql.user;
+
+
+
+
+PSQL---------------------------------------
+Passos para restaurar o backup
+
+Copiar arquivo dbmagna.sql para pasta /tmp do servidor
+Acessar o servidor
+Entrar na pasta /tmp
+cd /tmp
+
+Executar o comando de Dump para o banco criado
+psql -f dbmagna_texplan.sql -U postgres -d dbmagna_demo
+
+
+------Comando de acesso Dbmagna---- CLI
+psql -d dbmagna_stepan -U acesso -h 186.226.61.132
+
+----- 
+SELECT public.sp_integracao_colaborador_tactio('', '')
+
+sp_integracao_colaborador_tactio
+
+stepan*@2021!
+
+semcreden20221
+
+mudar a sequencia 
+
+ALTER SEQUENCE tbcolab_id_seq RESTART (numero_sequencia);
