@@ -82,3 +82,7 @@ https://stackoverflow.com/questions/18297980/pg-copy-error-invalid-input-syntax-
 Informações importantes -------------------------------------------------
 
 https://pt.stackoverflow.com/questions/101672/tem-como-saber-a-hora-que-um-registro-foi-adicionado-ao-banco
+
+Atalhos PostgreSQL
+PGAdmin =
+ctrl + shift + k + CAPSLOCK ATIVADO = Tudo maiúsculo

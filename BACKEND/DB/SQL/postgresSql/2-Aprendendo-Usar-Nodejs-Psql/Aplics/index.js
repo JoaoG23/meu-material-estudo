@@ -18,6 +18,7 @@ const cliente = new Client({
 
 // ----EXECULTANDO FUNCOES DE TESTE ----
 // insererCarro('FIAT','');
+
  atualizarDado(8,{marca:'vindo do Node',modelo:'MOdelo Inserido pelo Node'});
 
 async function buscaCarros() {
