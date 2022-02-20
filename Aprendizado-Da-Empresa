@@ -129,3 +129,26 @@ semcreden20221
 mudar a sequencia 
 
 ALTER SEQUENCE tbcolab_id_seq RESTART (numero_sequencia);
+
+------- DANDO UM DESCRIBE NO POSTGRESQL ANTIGO ---------
+ESCOPO:
+select column_name, data_type, character_maximum_length, column_default, is_nullable
+from INFORMATION_SCHEMA.COLUMNS where table_name = '<name of table>';
+
+EXEMPLO REAL:
+
+select * from INFORMATION_SCHEMA.COLUMNS where table_name = 'public.tbcredencial_cadastradas';
+
+----------DROPANDO COLUNAS PSQL  -----------------------
+alter table tbcredencial_cadastradas 
+drop column saida;
+
+
+-----------PARA USAR O EMUN NO PSQL ---------------------------
+
+
+CREATE TYPE enum_direcao AS ENUM ('Entrada','Saida');
+
+alter table tbcredencial_cadastradas 
+add column direcao enum_direcao ;
+
