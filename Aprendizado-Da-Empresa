@@ -152,3 +152,8 @@ CREATE TYPE enum_direcao AS ENUM ('Entrada','Saida');
 alter table tbcredencial_cadastradas 
 add column direcao enum_direcao ;
 
+-----------------PSQL -------------
+
+Como dar select em campo nulos
+
+SELECT nome, empresa from Alunos a WHERE empresa is null;
