@@ -158,3 +158,60 @@ const retiraCaracteres = (valor,caractere) => valor.replace(caractere,'');
 
 
 
+
+
+
+function indexController() {
+    try {
+        // --- Receber Valores -----
+        const inputs = document.querySelectorAll('input[type=text],[type=number]');
+        const interruptores = document.querySelectorAll('input[type=checkbox]');
+
+        // ---  Estoques de Valores -----
+        let arrayDeValoresInputs = [];
+        let arrayDeValoresInterruptores = [];
+
+        // ----Extrair os valores e armazena no arrays Acimas------
+        extraiValoresTipoValueEArmazena(arrayDeValoresInputs, inputs);
+        extraiValoresTipoCheckboxEArmazena(arrayDeValoresInterruptores, interruptores , converteTrueOuFalsePara0ou1);
+        
+        //_ Inserer na requisicao os dados 
+        const templateGpio =
+            `<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:services.accesscontroller">
+                <soapenv:Header/>
+                <soapenv:Body>
+                <urn:sendCmd soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+                    <endereco_ip xsi:type="xsd:string">${arrayDeValoresInputs[1]}</endereco_ip>
+                    <codigo_cmd xsi:type="xsd:string">${arrayDeValoresInputs[2]}</codigo_cmd>
+                    <parametros_cmd xsi:type="xsd:string">{"REMOTE_GPIO_PULSE":${arrayDeValoresInterruptores[0]},"REMOTE_GPIO_NUMBER":${arrayDeValoresInputs[3]},"REMOTE_GPIO_SET_VALUE":${arrayDeValoresInterruptores[1]},"REMOTE_GPIO_MS_TIME":${arrayDeValoresInputs[4]}}</parametros_cmd>
+                    <prioridade xsi:type="xsd:int">0</prioridade>
+                    <tipo_execucao xsi:type="xsd:int">0</tipo_execucao>
+                </urn:sendCmd>
+                </soapenv:Body>
+            </soapenv:Envelope>`;
+
+            const configChamada = {
+                protocolo:'http://',
+                host:'192.168.0.177/',
+                port:'',
+                path:'WSAccessController/server.php?wsdl'
+              }
+              
+     chamadaAjaxSOAP(templateGpio , configChamada);
+
+    } catch (error) {
+        console.log('Erro na função indexController da página: '+ error)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
