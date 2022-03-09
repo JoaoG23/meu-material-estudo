@@ -6,14 +6,16 @@ import App from './App';
      return (
 <header className='header verm'> 
   <h1>{props.nome}</h1>
-    <ul className='menu'>
-      <li>{props.links[2]}</li>
-      <li>{props.links[1]}</li>
-      <li>{props.links[0]}</li>
-    </ul>
+      <Menu links={props.links}></Menu>
 </header>
         
      );
+ }
+
+ function Menu(props) {
+     return (<ul className='menu'>
+       {props.links.map((link)  => {return(<li>link</li>)})}
+    </ul>)
  }
 
  export default Header;

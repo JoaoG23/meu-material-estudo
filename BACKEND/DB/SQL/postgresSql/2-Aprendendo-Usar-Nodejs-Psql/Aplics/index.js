@@ -21,7 +21,7 @@ const cliente = new Client({
 
  atualizarDado(8,{marca:'vindo do Node',modelo:'MOdelo Inserido pelo Node'});
 
-async function buscaCarros() {
+    async function buscaCarros() {
     try {
 
 
@@ -55,7 +55,7 @@ async function insererCarro( marca, modelo ) {
 
         const resultado = await cliente.query('SELECT * FROM carros');
         console.log(resultado.rows)
-
+ 
     } catch (erro) {
 
         console.log('Ocorreu um erro em Inserir um Dado!' + erro);
