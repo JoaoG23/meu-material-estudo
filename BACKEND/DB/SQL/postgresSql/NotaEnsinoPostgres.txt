@@ -86,3 +86,8 @@ https://pt.stackoverflow.com/questions/101672/tem-como-saber-a-hora-que-um-regis
 Atalhos PostgreSQL
 PGAdmin =
 ctrl + shift + k + CAPSLOCK ATIVADO = Tudo maiúsculo
+ctrl + . = descomenta 
+ctrl + ; = comenta selecionado
+clique no Comando ctrl + espaco = sugestao 
+ex:
+where + ctrl + espaco

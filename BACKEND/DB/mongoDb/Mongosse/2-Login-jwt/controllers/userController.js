@@ -22,7 +22,7 @@ const userController = {
         const user = new User({
             name:req.body.name,
             email:req.body.email,
-            password: bcrypt.hashSync(req.body.password)
+            password: bcrypt.hashSync(req.body.password) // Encriptar senha antes de chegar ao banco
         });
         
         try {
@@ -33,23 +33,26 @@ const userController = {
         }
     },
 
+
+    
+
     login: async function( req , resp ){
 
         const {error} = loginValidate(req.body);
         if (error) { return resp.status(400).send(error.message); }
 
-        const selectedUser = await User.findOne({email:req.body.email});
+        const selectedUser = await User.findOne({email:req.body.email}); // Acha usuario pelo email
         if (!selectedUser){ return resp.status(400).send(" The email or Password incorrect")};
 
-        const senhaEuserMatch = bcrypt.compareSync(req.body.password, selectedUser.password);
+        const senhaEuserMatch = bcrypt.compareSync(req.body.password, selectedUser.password); // Compara se e falso ou verdadeiro a senha
         if(!senhaEuserMatch){
             return resp.status(400).send(" The email or Password incorrect");
         }
 
-        const token = jwt.sign({_id:selectedUser._id , admin: selectedUser.admin }, process.env.TOKEN_SECRET);
+        const token = jwt.sign({_id:selectedUser._id , admin: selectedUser.admin }, process.env.TOKEN_SECRET); // Gera token segredo
 
         // TOKEN em header = chave + valor
-        resp.header('authorization-token', token);
+        resp.header('authorization-token', token); // Inserer no cabecalho
         resp.send(" User Logged !");
         console.log('User Logged !');
         

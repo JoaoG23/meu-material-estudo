@@ -53,4 +53,28 @@ select * from pedido_item;
 
 
 ## ------Insira em uma tabela de pedido_item para execultar a TRIGGER NO CODIGO------
-insert into pedido_item (nro_pedido, codigo_produto, quantidade, total, cancelado) value (1,2,10,10,'N');
+insert into pedido_item (nro_pedido, codigo_produto, 
+quantidade, total, cancelado) value (1,2,10,10,'N');
+
+
+
+---- ---- Trigger Sua criacao com procedure --------
+--- 1 Criar Trigger - que exerculta uma funcao
+create trigger tr_baixa_acessos after insert 
+ON tb_registro_acessos FOR EACH ROW 
+----- 2 Execultar a funcao de decremento 
+    EXECUTE PROCEDURE  pr_baixa_acessos();
+	
+	
+	
+	----- 3 Criar a funcao exercultada pela trigger 
+	CREATE FUNCTION pr_baixa_acessos()
+    RETURNS trigger --- retorna trigger 
+    LANGUAGE 'plpgsql'
+AS $$
+	BEGIN --- criar insert credencial ou 
+			update tbcredencial_cadastradas 
+			set tbcredencial_cadastradas.limite_acessos = tbcredencial_cadastradas.limite_acessos - 1
+			where tbcredencial_cadastradas.credencial = tb_registro_acessos.credencial;
+	END		
+$$;

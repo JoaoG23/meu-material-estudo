@@ -6,13 +6,13 @@ import App from './App';
      return (
 <header className='header verm'> 
   <h1>{props.nome}</h1>
-      <Menu links={props.links}></Menu>
+      <Menus links={props.links}></Menus>
 </header>
         
      );
  }
 
- function Menu(props) {
+ function Menus(props) {
      return (<ul className='menu'>
        {props.links.map((link)  => {return(<li>link</li>)})}
     </ul>)
