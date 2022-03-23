@@ -1,8 +1,12 @@
- import React from 'react'
+ import React from 'react';
+ import Menus from './Menu';
 import App from './App';
  import './App.css'
 
- function Header(props) {
+
+
+
+ function Header(props) { // 2-  Criando um componente
      return (
 <header className='header verm'> 
   <h1>{props.nome}</h1>
@@ -12,13 +16,8 @@ import App from './App';
      );
  }
 
- function Menus(props) {
-     return (<ul className='menu'>
-       {props.links.map((link)  => {return(<li>link</li>)})}
-    </ul>)
- }
 
- export default Header;
+ export default Header; // 3 - exportando Header.js
 /// -------------REVISAO do Aprendizado -----------
  // 1 - Criando Componente
  // 1 - Criar Arquivo javascript ex: headerjs
