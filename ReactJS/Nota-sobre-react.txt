@@ -16,3 +16,5 @@ navegadores
 eu quero juntar eles para se torna uma coisa 
 em uma tela criado com react e um cojunto de
 varios COMPONENTES.
+
+comando para Setar REACT
