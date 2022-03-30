@@ -1,9 +1,13 @@
 
 import './App.css';
 import Header from './header';// 4 - Importando o Header para App (componente principal)
+import Contador from './Contador';
 function App() {
   return (
-  <Header nome="LogoMarca" links={["Sobre","Comprar","Vender","Login"]}></Header> // nome = a props
+    <div>
+      <Header nome="LogoMarca" links={["Sobre","Comprar","Vender","Login"]}></Header> 
+      <Contador Contador={6}></Contador>
+    </div>
   );
 }
 
