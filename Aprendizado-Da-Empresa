@@ -157,3 +157,20 @@ add column direcao enum_direcao ;
 Como dar select em campo nulos
 
 SELECT nome, empresa from Alunos a WHERE empresa is null;
+
+PARA DELETAR UM SERVICO NO WINDOWS =================================
+https://www.softdownload.com.br/como-remover-servicos-no-windows.html
+
+1- Entre no Cmd com administrador
+	em seguida 
+2 - Digite no pesquisa os servicos
+	Ache o nome do servico que voce quer deletar em
+	1- clique em propriedade 
+	2 - Copie o nome do servico em nome do servico
+	3 - Entre no Cmd com administrador
+	em seguida 
+	e digite na tela 
+	4 - sc delete <nome_do_servico> 
+	EX: sc delete tele1
+	Aparecera na tela isso.
+	[SC] DeleteService ÊXITO
