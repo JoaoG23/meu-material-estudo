@@ -1,12 +1,15 @@
 
 import { useState , useEffect } from 'react';
 import './App.css';
+import objPrincipal, { ObjetoNaoDefault } from './Coisas'; // Pode dar qualquer nome pois vou dar exportacao default...
 import Contador from './Contador';
 
 function App() {
   const [show , setShow] = useState(true);
   
   let time = 0;
+  console.info(objPrincipal);
+  console.info(ObjetoNaoDefault);
 
   useEffect(() => {
 

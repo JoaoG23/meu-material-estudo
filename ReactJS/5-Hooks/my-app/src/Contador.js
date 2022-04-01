@@ -21,6 +21,7 @@
  * 
  * 4º - Para representar o componentWillUnmount, basta
  * realizar o evento quando o elemento sai da tela.
+ * 
  *  Ex: abaixo = Use isso no useEffects 
  *         return() => {
             console.info("Não tem mais contador......")
