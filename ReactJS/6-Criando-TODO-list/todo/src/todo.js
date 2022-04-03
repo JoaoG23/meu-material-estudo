@@ -20,9 +20,15 @@ function Todo() {
 
     function onAddItem( text ) {
         
-        let itemAdd = new Item(text);
-
+        let itemAdd = new Item(text); 
         setItems([...items , itemAdd]);
+    }
+
+    function onItemDeleted( item ) { // Funcao de remocao de itens
+
+        let filteredItems = items.filter( it => it.id !== item.id );
+
+        setItems(filteredItems);
     }
 
     return(
@@ -30,7 +36,7 @@ function Todo() {
             <h1>Todo</h1>
 
             <TodoForm onAddItem={onAddItem}></TodoForm>
-            <Lista items={items}></Lista>
+            <Lista onItemDeleted={onItemDeleted} items={items}></Lista>
         </div>
     )
 }
