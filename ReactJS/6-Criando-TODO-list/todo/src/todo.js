@@ -24,19 +24,33 @@ function Todo() {
         setItems([...items , itemAdd]);
     }
 
+
     function onItemDeleted( item ) { // Funcao de remocao de itens
 
         let filteredItems = items.filter( it => it.id !== item.id );
-
         setItems(filteredItems);
     }
+
+
+    function onItemChecked( item ) { // Funcao de remocao de itens
+
+        console.log('Clicado')
+        let updateItems = items.map(it => {
+            if ( it.id === item.id ) {
+                it.done = it.done;
+            }
+            return it;
+        })
+        setItems(updateItems); // Atualiza o estado
+    }
+
 
     return(
         <div className='container'>
             <h1>Todo</h1>
 
             <TodoForm onAddItem={onAddItem}></TodoForm>
-            <Lista onItemDeleted={onItemDeleted} items={items}></Lista>
+            <Lista onItemChecked={onItemChecked} onItemDeleted={onItemDeleted} items={items}></Lista>
         </div>
     )
 }
