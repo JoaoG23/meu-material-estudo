@@ -37,7 +37,7 @@ function Todo() {
         console.log('Clicado')
         let updateItems = items.map(it => {
             if ( it.id === item.id ) {
-                it.done = it.done;
+                it.done = !it.done;
             }
             return it;
         })

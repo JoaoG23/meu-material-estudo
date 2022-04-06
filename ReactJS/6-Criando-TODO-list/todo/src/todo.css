@@ -3,3 +3,8 @@
     margin: auto;
     max-width: 900px;
 }
+
+.done {
+    text-decoration: line-through;
+    transition: 1s ease-in-out;
+}

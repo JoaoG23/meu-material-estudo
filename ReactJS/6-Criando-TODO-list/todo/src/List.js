@@ -2,9 +2,9 @@ import React from "react"
 
 function DoneImg(props) {
     if ( props.done ) {
-        return (<img alt="done" src="../Assets/check_circle.svg"></img>)
+        return (<img alt="done" src="./Assets/check_circle.svg"></img>)
     } else {
-        return (<img alt="undone" src="../Assets/semCheck.svg"></img>)
+        return (<img alt="undone" src="./Assets/semCheck.svg"></img>)
         
     }
 }
