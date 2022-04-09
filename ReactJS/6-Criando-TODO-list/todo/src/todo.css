@@ -28,7 +28,8 @@ h1{
    color: rgb(79, 10, 144);
 }
 .container{
-    margin: auto;
+ 
+    margin: 100px auto auto auto;
     max-width: 650px;
 }
 
