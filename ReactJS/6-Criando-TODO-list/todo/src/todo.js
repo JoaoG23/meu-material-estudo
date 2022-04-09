@@ -1,7 +1,7 @@
 import React , { useEffect, useState } from 'react';
-import Lista from './List';
-import Item from './Item';
-import TodoForm from './TodoForm';
+import Lista from './Componentes/List';
+import Item from './Componentes/Item';
+import TodoForm from './Componentes/TodoForm';
 import './todo.css';
 
 // Lembre-se so podemos modificar um elemento atraves dos estados.
@@ -33,8 +33,7 @@ function Todo() {
 
 
     function onItemChecked( item ) { // Funcao de remocao de itens
-
-        console.log('Clicado')
+        console.log('Clicado');
         let updateItems = items.map(it => {
             if ( it.id === item.id ) {
                 it.done = !it.done;
@@ -46,7 +45,7 @@ function Todo() {
 
 
     return(
-        <div className='container'>
+        <div className='container centralizado'>
             <h1>Todo</h1>
 
             <TodoForm onAddItem={onAddItem}></TodoForm>

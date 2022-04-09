@@ -1,10 +1,29 @@
+body{
+    background-image: linear-gradient(rgb(152, 11, 183) ,rgb(119, 17, 192));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+input{
+    font-size: 20px;
+}
+h1{
+    text-align: center;
+}
 .container{
-    border: 3px solid green;
+    background-color: rgb(251, 240, 255);
     margin: auto;
     max-width: 900px;
+    padding: 13px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px rgb(232, 196, 242);
 }
 
 .done {
     text-decoration: line-through;
     transition: 1s ease-in-out;
 }
+
+

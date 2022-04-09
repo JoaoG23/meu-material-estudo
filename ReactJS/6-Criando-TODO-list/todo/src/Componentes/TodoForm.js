@@ -1,4 +1,6 @@
 import React ,{ useState } from "react";
+import './TodoForm.css';
+
 
 function TodoForm(props) {
 
@@ -19,9 +21,9 @@ function TodoForm(props) {
         } 
     }
      
-    return(<form>
+    return(<form className="container-row aoCanto">
         <input onChange={mostrarNoImput} type="text" value={text}></input> 
-        <button onClick={adicionarNaLista}>Adicionar</button>
+        <button className="btn" onClick={adicionarNaLista}> &#10010;</button>
     </form>
     )
 }

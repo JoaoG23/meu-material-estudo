@@ -1,0 +1,38 @@
+.container-row{
+    display: flex;
+    flex-direction: row;
+}
+.aoCanto{
+    justify-content: space-between;
+}
+
+
+
+.btn {
+    background-color: rgb(239, 209, 57);
+    border: 6px solid rgb(250, 221, 126);
+    color: rgb(228, 216, 177);
+    font-size: 17px;
+    padding: 20px;
+    border-radius: 40%;
+    box-shadow: 2px 2px 10px rgb(174, 174, 174);
+}
+.btn:hover{
+    transition: all 1s;
+    border: 7px solid rgb(175, 140, 26);
+    color: rgb(216, 212, 195);
+    background-color: rgb(190, 157, 36);
+}
+input{
+    max-width: 90%;
+    width: 90%;
+    height: 50px;
+    color: rgb(119, 6, 189);
+    border-radius: 10px;
+    border:none;
+    box-shadow: 3px 3px 10px rgb(232, 196, 242);
+}
+
+button {
+    border: none;
+}
