@@ -1,18 +1,10 @@
-.container-row{
-    display: flex;
-    flex-direction: row;
-}
-.aoCanto{
-    justify-content: space-between;
-}
-
-
 
 .btn {
     background-color: rgb(239, 209, 57);
     border: 6px solid rgb(250, 221, 126);
     color: rgb(228, 216, 177);
     font-size: 17px;
+    margin-left: 3px;
     padding: 20px;
     border-radius: 40%;
     box-shadow: 2px 2px 10px rgb(174, 174, 174);
@@ -23,9 +15,18 @@
     color: rgb(216, 212, 195);
     background-color: rgb(190, 157, 36);
 }
-input{
-    max-width: 90%;
-    width: 90%;
+
+.space-between{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inputStyle{
+    font-size: 23px;
+    max-width: 70%;
+    width: 70%;
     height: 50px;
     color: rgb(119, 6, 189);
     border-radius: 10px;

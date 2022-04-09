@@ -6,21 +6,45 @@ body{
     background-attachment: fixed;
 }
 
-input{
-    font-size: 20px;
-}
-h1{
-    text-align: center;
-}
-.container{
-    background-color: rgb(251, 240, 255);
-    margin: auto;
-    max-width: 900px;
-    padding: 13px;
-    border-radius: 20px;
-    box-shadow: 3px 3px 10px rgb(232, 196, 242);
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
+.item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    font-size: 30px;
+    padding: 10px;
+    margin-top: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+h1{
+   color: rgb(79, 10, 144);
+}
+.container{
+    margin: auto;
+    max-width: 650px;
+}
+
+.container-Style{
+    border-left:3px solid rgb(223, 215, 224) ;
+    background-color: rgb(251, 240, 255);
+    padding: 13px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px rgba(5, 5, 5, 0.147);
+}
+
+.card{
+    background-color: white;
+    box-shadow: 3px 3px 10px rgba(5, 5, 5, 0.147);
+    border-radius: 10px;
+}
 .done {
     text-decoration: line-through;
     transition: 1s ease-in-out;

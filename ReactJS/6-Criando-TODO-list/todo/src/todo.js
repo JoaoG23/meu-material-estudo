@@ -45,11 +45,12 @@ function Todo() {
 
 
     return(
-        <div className='container centralizado'>
+        <div className='container container-Style'>
             <h1>Todo</h1>
-
+       
             <TodoForm onAddItem={onAddItem}></TodoForm>
             <Lista onItemChecked={onItemChecked} onItemDeleted={onItemDeleted} items={items}></Lista>
+
         </div>
     )
 }

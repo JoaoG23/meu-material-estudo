@@ -21,8 +21,8 @@ function TodoForm(props) {
         } 
     }
      
-    return(<form className="container-row aoCanto">
-        <input onChange={mostrarNoImput} type="text" value={text}></input> 
+    return(<form className="space-between">
+        <input className="inputStyle" onChange={mostrarNoImput} type="text" value={text}></input> 
         <button className="btn" onClick={adicionarNaLista}> &#10010;</button>
     </form>
     )
