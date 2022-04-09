@@ -25,13 +25,20 @@
 
 .inputStyle{
     font-size: 23px;
-    max-width: 70%;
-    width: 70%;
-    height: 50px;
     color: rgb(119, 6, 189);
+    font-weight: bolder;
+
+    max-width: 80%;
+    padding: 3px;
+    width: 80%;
+    height: 50px;
     border-radius: 10px;
     border:none;
     box-shadow: 3px 3px 10px rgb(232, 196, 242);
+}
+.inputStyle:focus{
+    transition: 2s;
+    border: 3px solid rgb(87, 6, 163);
 }
 
 button {

@@ -16,7 +16,19 @@ function Todo() {
      * 6º E onAddItem = tera o setItems 
      */
 
+    const ITEM_SALVADOS = 'itemSalvado';
     const [ items , setItems ] = useState([]);
+
+    useEffect(() => {
+        let itensSalvados = JSON.parse(localStorage.getItem(ITEM_SALVADOS));
+        if (itensSalvados) {
+            setItems(itensSalvados); 
+        }
+    },[])
+
+    useEffect(() => {
+        localStorage.setItem(ITEM_SALVADOS , JSON.stringify(items)) // sempre ele ira salva o item 
+    }, [items]) // Ficar de olho se houver alguma alteração nos itens 
 
     function onAddItem( text ) {
         
@@ -46,7 +58,7 @@ function Todo() {
 
     return(
         <div className='container container-Style'>
-            <h1>Todo</h1>
+            <h1>Lista de Tarefas</h1>
        
             <TodoForm onAddItem={onAddItem}></TodoForm>
             <Lista onItemChecked={onItemChecked} onItemDeleted={onItemDeleted} items={items}></Lista>

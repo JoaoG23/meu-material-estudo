@@ -14,7 +14,7 @@ function DoneImg(props) {
 function ListItems(props) {
     
     return(<li>
-                         <Card className={props.item.done ? "done item" : "item"}>
+        <Card className={props.item.done ? "done item" : "item"}>
                             { props.item.text }
                                 <div>
                                     <button onClick={ () => { props.onItemChecked(props.item) }}><DoneImg done={ props.item.done }></DoneImg> </button>
