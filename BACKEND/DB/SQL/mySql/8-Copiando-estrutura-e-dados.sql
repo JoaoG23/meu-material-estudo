@@ -55,3 +55,6 @@ select * from alunos;
 insert into backup.alunos select * from empresa.alunos;
 
 
+QUANDO O BANCO POR MEDIDAS DE SEGURACA NAO DEIXA VOCE DAR UM UPDATE
+
+SET SQL_SAFE_UPDATES=0;
