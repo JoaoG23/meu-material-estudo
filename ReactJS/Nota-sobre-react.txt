@@ -18,3 +18,4 @@ em uma tela criado com react e um cojunto de
 varios COMPONENTES.
 
 comando para Setar REACT
+npx create-react-app nome_do_projeto
