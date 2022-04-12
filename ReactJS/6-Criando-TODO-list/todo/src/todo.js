@@ -2,6 +2,7 @@ import React , { useEffect, useState } from 'react';
 import Lista from './Componentes/List';
 import Item from './Componentes/Item';
 import TodoForm from './Componentes/TodoForm';
+import Modal from './Componentes/Modal';
 import './todo.css';
 
 // Lembre-se so podemos modificar um elemento atraves dos estados.
@@ -15,6 +16,8 @@ function Todo() {
      * 5º Adicionar ela no TodoForm
      * 6º E onAddItem = tera o setItems 
      */
+
+    const [showModal , setMostraModal] = useState(false);
 
     const ITEM_SALVADOS = 'itemSalvado';
     const [ items , setItems ] = useState([]);
@@ -34,6 +37,7 @@ function Todo() {
         
         let itemAdd = new Item(text); 
         setItems([...items , itemAdd]);
+        onEscondeModal();
     }
 
 
@@ -55,14 +59,17 @@ function Todo() {
         setItems(updateItems); // Atualiza o estado
     }
 
+    function onEscondeModal() {
+        setMostraModal(false);
+    }
+
 
     return(
         <div className='container container-Style'>
-            <h1>Lista de Tarefas</h1>
-       
-            <TodoForm onAddItem={onAddItem}></TodoForm>
+            <header className='header'><h1>Lista de Tarefas</h1> <button onClick={() => {setMostraModal(true)}} className='botaoAdicionar'>+</button> </header>
+            
             <Lista onItemChecked={onItemChecked} onItemDeleted={onItemDeleted} items={items}></Lista>
-
+            <Modal show={showModal} onEscondeModal={onEscondeModal}><TodoForm onAddItem={onAddItem}></TodoForm></Modal>
         </div>
     )
 }
