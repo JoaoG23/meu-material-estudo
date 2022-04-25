@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerar Pdf</title>
+</head>
+<body>
+  <h1>Gerando PDF em arquivo para download</h1>
+
+  <div id="dados">
+    <p>Nome: Joao    Idade: 23   Altura: 1.34</p>
+    <p>Nome: Joao    Idade: 23   Altura: 1.34</p>
+    <p>Nome: Joao    Idade: 23   Altura: 1.34</p>
+    <p>Nome: Joao    Idade: 23   Altura: 1.34</p>
+    <p>Nome: Joao    Idade: 23   Altura: 1.34</p>
+    <p>Nome: Joao    Idade: 23   Altura: 1.34</p>
+    <p>Nome: Joao    Idade: 23   Altura: 1.34</p>
+    <p>Nome: Joao    Idade: 23   Altura: 1.34</p>
+
+
+  </div>
+  <div>
+    <input type="button" value="IMPRIMIR" onclick="gerar_pdf()">
+  </div>
+
+  <script>
+    function gerar_pdf() {
+      let buscaDados = document.querySelector('#dados').innerHTML;
+
+
+      let janela = window.open('url','nomeJanela','width=800, height=400')
+      janela.document.write('<html><head>');
+      janela.document.write('<title>Joao</title></head>');
+      janela.document.write('<body>');
+      janela.document.write(buscaDados);
+      janela.document.write('<body/>');
+      janela.document.write('</html>');
+      janela.print();
+
+      // janela.document.close();
+    }
+  </script>
+</body>
+</html>

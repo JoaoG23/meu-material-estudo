@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h1>Trabalhando trabalhando arrays olhe o console</h1>
+    <i>Trabalhando trabalhando arrays olhe o console</->
     <div id="teste"></div>
 
     <script>
@@ -20,8 +20,8 @@
         //     const numeroPositivo = [1 , 2, 3];
         //     const numeroNegativo = [-3 , -2 , -1];
 
-        //     console.log(numeroPositivo);
-        //     console.log(numeroNegativo);
+        //     // console.log(numeroPositivo);
+        //     // console.log(numeroNegativo);
         //     let numeros = numeroNegativo.concat( zero , numeroPositivo );
         //     let numeros2 = numeroNegativo.concat( numeroPositivo );
 
@@ -30,18 +30,16 @@
 
         // }
 
-        // {
-        //     // Se Impar ou par EVERY 
-        //     function imparPar(x){
+        {
+            // Se Impar ou par EVERY 
+            // const imparPar = (x) => { x % 2 === 0 ? true : false;}
+            // const maiorQueValor = (x) => { x > 0 ? true : false;}
 
-        //         return x % 2 === 0 ? true : false;
-        //     }
+            // let numeros = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
 
-        //     let numeros = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
-
-        //     let selecao = numeros.every(imparPar);
-        //     console.log(selecao);
-        // } 
+            // let selecao = numeros.every(maiorQueValor);
+            // console.log(selecao);
+        } 
 
 
         // {
@@ -59,17 +57,22 @@
         // }
 
 
-        // {
-        //     // FOREACH
-        //     let teste = document.getElementById('teste');
-        //     console.log(teste);
+    function escopoForEach() {
+            // FOREACH
+            function mostraNaTela(numero, elementoMostrador) {
+                const elementoRevelador = document.querySelector(`${elementoMostrador}`);
+                elementoRevelador.innerHTML += `<li>${numero}</li>`
+            }
+            console.log(teste);
 
-        //      let numeros = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
-        //     //  let numeros = [0,1,2,3,4];
-        //     //numeros.forEach((numero) => console.log(numero));
-        //     numeros.forEach((numero) => teste.innerHTML += `<li>${numero}</li>`);
-        //     console.log(numeros);
-        // }
+             let numeros = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+            //  let numeros = [0,1,2,3,4];
+
+            numeros.forEach((numeros) => mostraNaTela(numeros,'#teste'))
+           
+            // numeros.forEach((numero) => teste.innerHTML += `<li>${numero}</li>`);
+            console.log(numeros);
+        }
 
 
 
@@ -160,11 +163,28 @@
 
         // }
 
-        let numeros = [1, 2, 3, 4, 5];
-        let numerosCopy2 = Array.from(numeros , x => ( x > 2 )); // Obtem o valor da chave e o valor..
-        console.log(numerosCopy2);
+        // let numeros = [1, 2, 3, 4, 5];
+        // let numerosCopy2 = Array.from(numeros , x => ( x > 2 )); // Obtem o valor da chave e o valor..
+        // console.log(numerosCopy2);
 
+ 
 
+        // Exercicio como como refatora a mascara de front de cpf
+        // Para multiplas mascaras 
+(        function mascaraGenerica() {
+            let salto = 3;
+            let letras = '189233444';
+            let elemento;
+            
+            for (let i = 0; i < letras.length; i++) {
+                if (letras > salto) {
+                    salto += 3;
+                    letras.indexOf(letras,3)
+                }
+            }
+            console.info(elemento);
+            // para cada 1 analiza se o ulimo mais 3
+        })();
     </script>
 </body>
 
