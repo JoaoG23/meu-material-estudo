@@ -36,3 +36,22 @@ run(function(){
 
 const result = run(Math.random);
 console.log(result);
+
+
+function ReceberParams(dadosValidados){
+    function exercultarAposOutrosParams(trueOrFalse) {
+        if (!trueOrFalse) {
+            return 'nao pode passar para o proximo passo';
+        } else {
+            return window.location.replace(caminho);
+        }
+    }
+    return exercultarAposOutrosParams;
+}
+// function ReceberParams(dadosValidados,caminho){
+//     function exercultarAposOutrosParams(trueOrFalse) {
+//         // const validar = trueOrFalse;
+//         // validar === true ? return window.location.replace(caminho) : return 'Acesso negado';
+//     }
+    // return exercultarAposOutrosParams
+// }
