@@ -9,7 +9,7 @@ const incrementAction = (carga)  =>  { return {  type:'INCREMENT', payload:carga
 const decrementAction = (carga)  =>  { return {  type:'DECREMENT', payload:carga || 1 } };
 
 
-module.export = {
+module.exports = {
     incrementAction,
     decrementAction
 }

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpinnerLoad</title>
+</head>
+<style>
+*{
+    margin: 0;
+}
+    .container {
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       width: 100vw;
+       height: 100vh;
+    }
+    img{
+        display: none;
+        width: 420px;
+        transform: rotate(360deg);
+        animation-name: rodando;
+
+    }
+
+    .fundoCirculo{
+
+        display: inline-block;
+        box-shadow: 10px 10px  100px rgba(188, 31, 212, 0.279);
+        height: 350px;
+        width: 350px;
+        background-image:linear-gradient( rgb(138, 52, 218), rgb(164, 83, 239));
+        border-radius: 50%;
+        animation-name: rodando;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+        animation-duration: 1s;
+        
+        overflow: hidden;
+        
+    }
+    .meio{
+        
+        position: absolute;
+        top: 234px;
+        left: 250px;
+        right: 0px;
+        bottom: 0px;
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        height: 270px;
+        width: 270px;
+        box-shadow: 10px 10px  100px rgba(188, 31, 212, 0.39);
+    }
+    
+    .cursor{      
+        
+        height: 150px;
+        width: 140px;
+        background-color: rgb(95, 13, 172);
+    }
+    
+    @keyframes rodando {
+        0%{ transform: rotate(0deg); }
+        100%{ transform: rotate(360deg); }
+    }
+
+</style>
+<body>
+    <div class="container">
+        
+        <div class="fundoCirculo">
+            <div class="cursor"></div>
+        </div>
+        <div class="meio">
+        </div>
+    </div>
+    <img src="./assets/Planta_verdinha.webp">
+</body>
+</html>

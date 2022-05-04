@@ -1,4 +1,4 @@
-module.export =  ( state = 0 , action  ) => {
+module.exports =  ( state = 0 , action  ) => {
     switch ( action.type ) {
 
         case 'INCREMENT':
