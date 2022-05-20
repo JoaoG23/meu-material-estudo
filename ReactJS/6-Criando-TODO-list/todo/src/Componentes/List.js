@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import './List.css';
 import ListItems from './ListItems';
 
@@ -6,7 +7,8 @@ import ListItems from './ListItems';
 
 
 function List(props) {
-    return(<ul>{ props.items.map(item => <ListItems  key={ item.id } item={ item }  onItemChecked={ props.onItemChecked } onItemDeleted={ props.onItemDeleted } ></ListItems>) }</ul>)
+    const items = useSelector( state => state );
+    return(<ul>{ items.map(item => <ListItems  key={ item.id } item={ item }   ></ListItems>) }</ul>)
 }
 
 export default List;
