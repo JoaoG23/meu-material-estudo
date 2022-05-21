@@ -16,7 +16,6 @@
                 fetch(caminhoDaPagina)
                 .then((resp) => resp.text())
                 .then((dados) => {
-                    console.log(dados)
     
                     desmostrador.innerHTML = dados;
                 }).catch((erro) =>{

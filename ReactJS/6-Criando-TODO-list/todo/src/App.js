@@ -1,6 +1,5 @@
-import React , { useEffect, useState } from 'react';
+import React , {  useState } from 'react';
 import Lista from './Componentes/List';
-import Item from './Componentes/Item';
 import TodoForm from './Componentes/TodoForm';
 import Modal from './Componentes/Modal';
 import './todo.css';
@@ -10,9 +9,9 @@ import { Provider } from 'react-redux';
 
 import listReduce from './Reduces/listReduce';
 
-const store = createStore(listReduce);
+
 // Lembre-se so podemos modificar um elemento atraves dos estados.
-function App() {
+
     /**
      * COMO PASSAR DO FILHO PARA O PAI
      * 1º Criar um component TodoForm 
@@ -23,52 +22,39 @@ function App() {
      * 6º E onAddItem = tera o setItems 
      */
 
-    const [showModal , setMostraModal] = useState(false);
+    
 
-    // const ITEM_SALVADOS = 'itemSalvado';
+    const ITEM_SALVADOS = 'itemSalvado';
     // const [ items , setItems ] = useState([]);
 
-    // useEffect(() => {
-    //     let itensSalvados = JSON.parse(localStorage.getItem(ITEM_SALVADOS));
-    //     if (itensSalvados) {
-    //         setItems(itensSalvados); 
-    //     }
-    // },[])
+function persistState( state ) {
+    localStorage.setItem( ITEM_SALVADOS , JSON.stringify( state ));
+}
 
-    // useEffect(() => {
-    //     localStorage.setItem(ITEM_SALVADOS , JSON.stringify(items)) // sempre ele ira salva o item 
-    // }, [items]) // Ficar de olho se houver alguma alteração nos itens 
-
-    // function onAddItem( text ) {
-        
-    //     let itemAdd = new Item(text); 
-    //     setItems([...items , itemAdd]);
-    //     onEscondeModal();
-    // }
+function loadState() {
+    const actualState = localStorage.getItem(ITEM_SALVADOS);
+    if (actualState) 
+        return JSON.parse(actualState)
+     else 
+        return []
+}
 
 
-    // function onItemDeleted( item ) { // Funcao de remocao de itens
 
-    //     let filteredItems = items.filter( it => it.id !== item.id );
-    //     setItems(filteredItems);
-    // }
+const store = createStore(listReduce, loadState());
+
+store.subscribe(() => {
+    persistState( store.getState() )
+})
 
 
-    // function onItemChecked( item ) { // Funcao de remocao de itens
-    //     console.log('Clicado');
-    //     let updateItems = items.map(it => {
-    //         if ( it.id === item.id ) {
-    //             it.done = !it.done;
-    //         }
-    //         return it;
-    //     })
-    //     setItems(updateItems); // Atualiza o estado
-    // }
+function App() {
+
+    const [showModal , setMostraModal] = useState(false);
 
     function onEscondeModal() {
         setMostraModal(false);
     }
-
 
     return(
         <div className='container container-Style'>
