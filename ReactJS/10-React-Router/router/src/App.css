@@ -41,7 +41,6 @@ html{
 
 a{
   text-decoration: none;
-  color: aliceblue;
 }
 .navbar {
 
@@ -58,7 +57,7 @@ a{
 
 .lista{
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   gap: 20px;
   list-style-type: none;
   text-decoration: none;
@@ -68,4 +67,16 @@ a{
 
 .aulas{
   list-style-type: none;
+}
+
+.liked{
+  color: darkgreen;
+}
+
+.btn{
+  background-color: aliceblue;
+  color: rgb(9, 89, 124);
+  font-weight: bolder;
+  border: none;
+  border-radius: 3px;
 }
