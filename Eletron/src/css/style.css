@@ -1,0 +1,36 @@
+body{ 
+    padding:0;
+    margin:0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header{
+    font-size: 14px;
+    background-color: tomato;
+    display: flex;
+    justify-content:space-between;
+    color: rgb(252, 234, 234);
+    align-items: center;
+    height: 60px;
+    padding: 2px;
+}
+
+.links{
+    list-style: none;
+    gap: 5px;
+    display:grid;
+    grid-template-columns: auto auto;
+}
+
+.btn{
+    font-weight: bolder;
+    border: none;
+    padding: 12px;
+    color: aliceblue;
+    border-radius: 6px;
+    background-color: rgb(237, 157, 38);
+}
+.btn:hover{
+    transition: 0.5s ease-out;
+    color: rgb(220, 132, 59);
+    background-color: rgb(252, 233, 205);
+}

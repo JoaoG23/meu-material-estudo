@@ -12,6 +12,7 @@ import Assistir from './Componentes/Assistir';
 import loginReducer from './Reduces/loginReducer';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import PrivateRoute from './Componentes/PrivateRoute';
 
 
 const store = createStore(loginReducer)
@@ -27,8 +28,16 @@ function App() {
             
             <Route exact path='/' element={<Home />}></Route>
             <Route path='/sobre' element={<Sobre />}></Route>
-            <Route path='/aulas/:id' element={<Aula />}></Route>
-            <Route path='/aulas/' element={<Aulas />}></Route>
+
+            <Route
+          path='/aulas'
+          element={
+            <PrivateRoute>
+              <Aulas />
+            </PrivateRoute>
+          }></Route>
+          <Route path='/aulas/:id' element={<Aula />}></Route>
+            {/* <PrivateRoute path='/aulas/' element={<Aulas />}></PrivateRoute> */}
             <Route path='/assistir' element={<Assistir />}></Route>
             <Route path='*' element={<h2>Essa Rota não Existe</h2>}></Route>
 
