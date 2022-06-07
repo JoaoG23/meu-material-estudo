@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONJUTNOS</title>
+</head>
+<body>
+    <script>
+
+
+// Pontos positivos
+// Pode remover o item de qualquer local da aplicacao somente passando o nome.
+        class Set {
+            constructor() {
+                this.items = {}
+            }
+            // Metodo antigo HAS 
+            // has( elemento ) {
+            //         return elemento in this.items;
+            //     }
+
+            // Metodo melhorado HAS 
+            has( elemento ) {
+                return Object.prototype.hasOwnProperty.call(this.items , elemento)
+            }
+            add( elemento ){
+                if(!this.has( elemento )) {
+                    this.items[ elemento ] = elemento;
+                    return true;
+                }
+                return false;
+            }
+            delete( elemento ){
+                if(this.has( elemento )) {
+                   delete this.items[ elemento ] 
+                    return true;
+                }
+                return false;
+            }
+            size(){
+                return Object.keys(this.items).length;
+            }
+            clear(){
+                this.items = {}
+            }
+            values(){
+                return Object.values(this.items);
+            }
+        }
+        let set = new Set;
+
+        set.add('Ana');
+        set.add('Ana Samira');
+        set.add('Felix');
+        set.add('Claudio');
+        set.add('Bruna');
+      console.info(set.size());
+      console.info(set.values());
+        console.info(set);
+
+    </script>
+</body>
+</html>

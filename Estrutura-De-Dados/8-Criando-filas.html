@@ -18,16 +18,17 @@
                 this.items = {};
             }
             
-            enqueueAddFinalFila( elemento ) {
+            adicionaCauda( elemento ) {
                 this.items[this.contador] = elemento;
                 this.contador ++;
             }
             
             
-            dequeueRemovePrimeiroFila() {
+            removeBico() {
                 if (this == '') {
                     return undefined
                 }
+
                 const RESULTADO = this.items[this.menorContador];
                 delete this.items[this.menorContador];
                 this.menorContador++;
@@ -48,7 +49,7 @@
                 this.menorContador =  0;
             }
             
-            paraCaracteres(){
+            paraCaract(){
                 if (this.eVazio()) {
                     return '';
                 }
@@ -63,27 +64,14 @@
                 
             }
         }
-        const FILA = new Queue;
-        const QUEUE = new Queue;
-    
-        console.log(FILA)
-        console.log(FILA.enqueueAddFinalFila('NovoItem1'));
-        console.log(FILA.enqueueAddFinalFila('NovoItem2'));
-        console.log(FILA.enqueueAddFinalFila('NovoItem3'));
-        console.log(FILA.dequeueRemovePrimeiroFila());
-        
-        // console.log(FILA.eVazio());
-        // console.log(FILA.verTamanho());
-        // console.log(FILA.esvazia());
-        console.log(FILA.paraCaracteres());
-        
-        console.log(QUEUE.enqueueAddFinalFila('Joao'));
-        console.log(QUEUE.enqueueAddFinalFila('Jose'));
-        console.log(QUEUE.enqueueAddFinalFila('Maria'));
-        console.log(QUEUE.enqueueAddFinalFila('Olegario Marciel'));
-        console.log(QUEUE.dequeueRemovePrimeiroFila());
-        console.log(QUEUE);
-        console.log(QUEUE.verTamanho());
+        const fila = new Queue;
+        fila.adicionaCauda('Lapis de Cera')
+        fila.adicionaCauda('Caneta Azul')
+        fila.adicionaCauda('Caneta Preta')
+        fila.paraCaract()
+        console.info(fila.paraCaract());
+        console.info(fila.verTamanho());
+        console.info(fila.eVazio());
 
     </script>
 </body>

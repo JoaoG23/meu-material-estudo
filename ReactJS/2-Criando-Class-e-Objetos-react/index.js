@@ -12,3 +12,5 @@ igor.greetings()
 
 let jasinto = new Aluno("Jasinto", 40, " BF 444")
 jasinto.greetings();
+
+console.info(jasinto);

@@ -5,7 +5,7 @@ import Nav from './Componentes/Nav';
 import Home from './Componentes/Home';
 import Aulas from './Componentes/Aulas';
 import Aula from './Componentes/Aula';
-import Sobre from './Componentes/Sobre';
+import Sobre from './Componentes/primeira/Segunda/Sobre';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Assistir from './Componentes/Assistir';
 
