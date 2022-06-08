@@ -9,7 +9,6 @@ class Pessoa {
     
     nomeCompleto(){
         return `${ this.nome } ${ this.sobrenome }`
-    }
 }
 
 // Class Static Nao precisamos criar uma nova instancia
