@@ -1,5 +1,31 @@
 // ---- 1 -- Aprendendo a criar uma class ----
+/**
+ * Antigamente nao existiam class no JS,
+ * assim se criava classes as funcoes construturas
+ * envés da classe.
+ * EX: FUNCAO CONSTRUTORA
+ * function Pessoa (name , sobrenome){
+ * this.nome = nome;
+ * this.sobrenome = sobrenome;
+    this.nomeCompleto = function() {
+        return `${this.nome} ${this.sobrenome}`;
+    }
+ * 
+ * }
+ * 
+ * Assim, sugiram as class:
+ 
+    Na realidade -- 
+    Isso e uma funcao construtora
 
+    Positivo:
+    1- Ajuda a economizar memoria.
+    2 - São mais simples de criar
+    
+    Negativo:
+
+    1-Não possuem o recurso de hoisting
+ */
 class Pessoa {
     constructor(nome, sobrenome, email = 'sem@email.com'){
         this.nome = nome;
