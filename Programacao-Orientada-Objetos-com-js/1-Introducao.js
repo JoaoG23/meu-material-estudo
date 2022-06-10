@@ -27,6 +27,8 @@
     1-Não possuem o recurso de hoisting
  */
 class Pessoa {
+
+    eViva = true; // Variavel temos atributos 
     constructor(nome, sobrenome, email = 'sem@email.com'){
         this.nome = nome;
         this.sobrenome = sobrenome;
@@ -37,6 +39,7 @@ class Pessoa {
         return `${this.nome} ${this.sobrenome}`
     }
 }
+
 console.info(joao);
 console.info(joao.nomeCompleto());
 console.info(charlene);
