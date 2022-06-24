@@ -26,7 +26,7 @@ class Contador extends React.Component {
     
     add(){
         //this.state.contador += 1 Forma errada -_- Não se pode mudar um state diretamente
-        // this.setState({ contador: this.state.contador + 1 }) // se fizer muito rapido pode pular sem atualizar
+        // this.setState({ contador: thdatais.state.contador + 1 }) // se fizer muito rapido pode pular sem atualizar
         this.setState((state) => { return { contador:state.contador + 1 } }); // Correta
     }
 

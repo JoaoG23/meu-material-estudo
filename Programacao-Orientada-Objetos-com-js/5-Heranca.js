@@ -54,3 +54,29 @@ let carro2 = new CarroCombate(1)
 carro1.setAlerta(false);
 carro1.info();
 carro2.info();
+
+// {
+// 	method: 'POST',
+// 	headers: {
+// 		'Content-Type': 'application/json',
+// 		'Accept': 'application/json'
+// 	},
+// 	body: JSON.stringify({
+// 		 name: name,
+// 		 info: info,
+// 		 stuff: stuff
+// 	})
+// }
+class Request {
+    constructor( endpoint, config ) {
+        this.endpoint = endpoint || 'http://localhost:4000';
+        this.config = config;
+    }
+
+    makeRequest() {
+         fetch( this.endpoint , this.config )
+         .then(resp => resp.json())
+         .then(data =>  console.info(data))
+         .catch(error => console.error(error));
+    }
+}

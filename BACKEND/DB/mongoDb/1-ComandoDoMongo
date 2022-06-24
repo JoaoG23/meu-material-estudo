@@ -113,7 +113,7 @@ db.users.updateMany({},{$unset:{class:""}})
 
 18- Deletar somente um Documento
 
-db.peoples.remove({yourName:"Teste JSON "},1)
+db.peoples.deleteOne({yourName:"Teste JSON "},1)
 
 19- Muda o documento como um todos
 Digite:

@@ -177,3 +177,31 @@ https://www.softdownload.com.br/como-remover-servicos-no-windows.html
 
 ------------COMANDO LEGAIS DO CMD----------
 https://blog.betrybe.com/tecnologia/comandos-windows/
+
+
+
+Postgres 
+Como configurar Acesso a SSH ao Banco via Pgadmin
+
+----- 1
+Entre no servidor 
+e cd no Caminho Abaixo:
+
+/etc/postgresql/12/main/postgresql.conf
+
+2 --------- Descomente 
+a linha tirando o #
+tirando o localhost para asterico no local, como no exemplo abaixo:
+
+Antes: #listen_addresses = 'localhost'         # what IP address(es) to listen on;
+
+Depois: #listen_addresses = '*'         # what IP address(es) to listen on;
+
+Salve e saia dele;
+
+3- Em seguida entre digite o comando abana mesma pasta main.
+
+sudo systemctl restart postgresql
+
+4 - Va nesse caminho agora e altere postgresql
+nano /etc/postgresql/12/main/pg_hba.conf

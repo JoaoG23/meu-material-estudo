@@ -1,0 +1,5 @@
+Request 
+|-> endpoint e configs = metodos, Se for post ou demais, Tem body
+|->endpoint -> tem host, protocol, port , path
+
+
