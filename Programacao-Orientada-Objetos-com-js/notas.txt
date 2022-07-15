@@ -1,5 +1,28 @@
-Request 
-|-> endpoint e configs = metodos, Se for post ou demais, Tem body
-|->endpoint -> tem host, protocol, port , path
+1- Conceitos iniciais.
+Todo objeto tem Caracteristica:
 
+ATRIBUTOS = Propriedades = Modelo, Cor, Ponta
+METODOS = Coisa que eu faço;
+ESTADO = Como estou agora.
 
+Classe Caneta
+
+modelo: Caracteres = Bic Cristal
+cor: Caracteres = Azul
+ponta: Real = 0.5
+carga: Inteiro = 90
+tampada: Logico = falso
+
+Metodos: rabiscar()
+Se (tampada) entao {
+    Nao rabiscar
+} senao{
+    Rabisca
+}
+
+ESTADO 
+Destampada
+Azul
+90%
+
+Instanciar Pego uma class e apartir dela posso tira objeto dela

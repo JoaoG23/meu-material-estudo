@@ -125,8 +125,6 @@ db.users.update({nome:"Joao"},{nome:"Marcos" , senha:"55554"})
 digite:
 db.users.update({nome:"Joao"},{nome:"Marcos" , senha:"55554"},{upsert:"true"})
 
-
-
 21 - Todos os campos lugares
 digite:
 db.users.updateMany({},{$rename:{"Visits":"views"}})

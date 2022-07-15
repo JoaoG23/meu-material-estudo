@@ -69,7 +69,7 @@ Ex: O conjunto é Oferta
 Ex: Provavelmente você não tenha assinado com todos os 
 anuciantes de jornais que lhe fizeram a oferta de assinatura.
 
-{OFERTA} = Teremos um pequeno numero de cliente.                   
+{ OFERTA } = Teremos um pequeno numero de cliente.                   
 
 Assim eu tenho que atrair um grande numero de 
 pessoas para que elas veja a minha oferta e se torne cliente.
@@ -113,3 +113,47 @@ ela não se tornou cliente.
 
 OBJETIVO = é tranformar pessoas em leads em seguida transformar
 leads em clientes.
+
+{      PESSOAS = VISITANTES      }
+ {  RELACIONAMENTO = LEADS    } 
+   {  OFERTA = OPORTUNIDADES }
+    { CLIENTES }
+
+#### 4 - TRAFEGO.
+
+Digamos que você venda artigos esportivo
+para futebol.
+Onde o publico direcionado são :
+
+  Homens de 15 a 50, de 1 a 15 salarios
+  mínimos.
+
+Porem pode ser que vendendo esse mesmo
+produto, poderá ter mais sucesso fazendo
+Vendendo para outro publico descartado, ou
+deixados um pouco de lado.
+
+Por ser um pouco menor.
+
+  Importante para montar a persona ou avatar = 
+  Publico Alvo definidos de pessoas.
+
+  Objetivo e que o {avatar}  =>>se torne {visitante}
+
+
+Trafego é justamente a tecnica para converte
+essas PUBLUCO = AVATAR em a visitante. 
+
+elas são:
+
+PAGO:
+Fbads
+Google Adds
+
+ORGANICO:
+
+SEO = Tomar algumas acoes para o que o site seja mais 
+exergado pelo GOOGLE.
+
+CONTEUDO = 
+

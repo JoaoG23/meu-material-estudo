@@ -74,3 +74,9 @@ typings/
 
 # FuseBox cache
 .fusebox/
+/teste/nbproject/private/
+/OoAula3GetterSetter/build/
+/OoAula3GetterSetter/nbproject/private/
+/OoAula5Encapsulamento/nbproject/private/
+/JavaApplication20/nbproject/private/
+/JAVA/OoAula5Encapsulamentos/build/

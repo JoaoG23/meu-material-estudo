@@ -10,15 +10,18 @@ const userController = {
 
     register: async function( req , resp ){
 
+        // Validação do Joi 
+        
         const {error} = registerValidate(req.body);
         if (error) { return resp.status(400).send(error.message); }
-
+        
         const selectedUser = await User.findOne({email:req.body.email});
-
+        
+        // Verificando de o Usuário já existe no banco. 
         if (selectedUser) {
             return resp.status(400).send(" The email already exists");
         }
-
+        
         const user = new User({
             name:req.body.name,
             email:req.body.email,
