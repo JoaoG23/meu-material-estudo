@@ -69,7 +69,7 @@ public class ControleRemoto implements Controlador {
         if( this.isLigado() ){
             this.setVolume(this.getVolume() + 5);
         } else {
-        
+            System.out.println("Impossivel aumentar volume");
         }
     }
 
@@ -86,6 +86,8 @@ public class ControleRemoto implements Controlador {
     public void ligarMudo() {
         if ( this.isLigado() && this.getVolume() > 0) {
             this.setVolume(0);
+        } else {
+            System.out.println("Impossivel ligar mudo");
         }
     }
 
@@ -93,6 +95,8 @@ public class ControleRemoto implements Controlador {
     public void desligarMudo() {
         if ( this.isLigado() && this.getVolume() == 0 ) {
             this.setVolume(50);
+        }  else {
+            System.out.println("Impossivel desligar mudo");
         }
     }
 
@@ -100,6 +104,8 @@ public class ControleRemoto implements Controlador {
     public void play() {
         if ( this.isLigado() && !( this.isTocando() ) ) {
             this.setTocando(true);
+        } else {
+            System.out.println("Impossivel dar play");
         }
     }
 
@@ -107,6 +113,9 @@ public class ControleRemoto implements Controlador {
     public void pause() {
         if ( this.isLigado() && this.isTocando() ){
             this.setTocando(false);
+        }
+        else {
+            System.out.println("Impossivel dar pause");
         }
     }
 }
