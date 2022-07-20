@@ -1,4 +1,8 @@
 {
     "git.ignoreLimitWarning": true,
-    "liveServer.settings.port": 5502
+    "liveServer.settings.port": 5502,
+    "java.project.sourcePaths": [
+        "JAVA/OoAula7ExercicioPessoa/src",
+        "JAVA/OoAula8FazendoSozinhoExercicio/src/main/java/com/mycompany/ooaula8fazendosozinhoexercicio"
+    ]
 }

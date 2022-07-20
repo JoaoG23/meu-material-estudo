@@ -1,21 +1,21 @@
 package ooaula7exerciciopessoa;
+
 public class Book implements Post {
+
     private String title;
     private String autor;
     private int totPages;
     private int pagAtual;
     private boolean aberto;
     private People leitor;
-    
-    
 
     public String detalhes() {
-        return "Book{" + "title" + title + 
-                "\n, autor=" + autor +
-                "\n, totPages=" + totPages + 
-                "\n, pagAtual=" + pagAtual + 
-                "\n, aberto=" + aberto + 
-                "\n, leitor=" + leitor.getName() + '}';
+        return "Book{" + "title" + title
+                + "\n, autor=" + autor
+                + "\n, totPages=" + totPages
+                + "\n, pagAtual=" + pagAtual
+                + "\n, aberto=" + aberto
+                + "\n, leitor=" + leitor.getName() + '}';
     }
 
     public Book(String title, String autor, int totPages, People leitor) {
@@ -26,7 +26,6 @@ public class Book implements Post {
         this.aberto = false;
         this.leitor = leitor;
     }
-
 
     public String getTitle() {
         return title;
@@ -59,7 +58,6 @@ public class Book implements Post {
     public void setLeitor(People leitor) {
         this.leitor = leitor;
     }
-    
 
     @Override
     public void abrir() {
@@ -83,11 +81,11 @@ public class Book implements Post {
 
     @Override
     public void folhear(int numeroPagina) {
-        if(numeroPagina > this.totPages) {
-           this.pagAtual = 0;
+        if (numeroPagina > this.totPages) {
+            this.pagAtual = 0;
         } else {
             this.pagAtual = numeroPagina;
         }
-        
+
     }
 }
