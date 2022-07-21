@@ -3,14 +3,6 @@ public class Funcionario extends Pessoa {
     private String setor;
     private boolean trabalhando;
 
-
-    // public Funcionario(String setor, boolean trabalhando) {
-    //     this.setor = setor;
-    //     this.trabalhando = trabalhando;
-    // }
-
-    
-
     @Override
     public String toString() {
         return "---Funcionario=" + setor + 
