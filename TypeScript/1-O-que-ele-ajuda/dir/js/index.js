@@ -1,4 +1,10 @@
 "use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 let x = 10;
 x = 2 + 2;
 console.warn(x);
@@ -10,23 +16,24 @@ let myTuple;
 myTuple = [5, "joao", ["Guilherme", "Tito"]];
 console.info(myTuple);
 const user = {
-    name: "jaoo", age: 34
+    name: "jaoo",
+    age: 34,
 };
 console.info(user);
 let qualquer = 0;
-qualquer = 'a';
+qualquer = "a";
 qualquer = true;
 qualquer = [];
 console.info(qualquer);
-let id = '10';
+let id = "10";
 id = 200;
 console.info(id);
 const userId = 10;
-const produtoId = 'R4332';
+const produtoId = "R4332";
 const srirdId = ["n33", "n44"];
-console.info('codProduto: ', userId);
-console.info('userID: ', produtoId);
-console.info('srId: ', srirdId);
+console.info("codProduto: ", userId);
+console.info("userID: ", produtoId);
+console.info("srId: ", srirdId);
 var Size;
 (function (Size) {
     Size["P"] = "Pequeno";
@@ -35,7 +42,7 @@ var Size;
 })(Size || (Size = {}));
 const camisa = {
     nome: "Camisola V",
-    tamanho: Size.G
+    tamanho: Size.G,
 };
 console.info(camisa);
 let teste;
@@ -49,9 +56,9 @@ console.info(resultado);
 function sayHelloTo(nome) {
     return `Hello : ${nome}`;
 }
-console.info(sayHelloTo('Matheus'));
+console.info(sayHelloTo("Matheus"));
 function naoRetornaNada() {
-    console.info('Nao retorna nada');
+    console.info("Nao retorna nada");
 }
 naoRetornaNada();
 function greenting(nome, greet) {
@@ -62,8 +69,8 @@ function greenting(nome, greet) {
         console.info(`Olá ${nome}`);
     }
 }
-greenting('Joao', 'Sr');
-greenting('Joao');
+greenting("Joao", "Sr");
+greenting("Joao");
 function somaNumeros(numeros) {
     return numeros.n1 + numeros.n2;
 }
@@ -74,15 +81,15 @@ function multiplica(numeros) {
 console.info(multiplica({ n1: 3, n2: 4 }));
 const algunsNumeros = {
     n1: 5,
-    n2: 18
+    n2: 18,
 };
 console.info(multiplica(algunsNumeros));
 function fazerChecagem(info) {
-    if (typeof info === 'number') {
-        console.info('O numero é ' + info);
+    if (typeof info === "number") {
+        console.info("O numero é " + info);
         return;
     }
-    console.info('Não foi passado um numero');
+    console.info("Não foi passado um numero");
 }
 fazerChecagem(true);
 function showArrayItens(arr) {
@@ -91,7 +98,7 @@ function showArrayItens(arr) {
     });
 }
 const a1 = [1, 2, 3];
-const a2 = ['a', 'b', 'c'];
+const a2 = ["a", "b", "c"];
 showArrayItens(a1);
 showArrayItens(a2);
 class User {
@@ -101,9 +108,41 @@ class User {
         this.isAprroved = isAprroved;
     }
     mostrarNome() {
-        console.log('Nome do usuario é ' + this.name);
+        console.log("Nome do usuario é " + this.name);
     }
 }
-const zeca = new User('Lucas', 'Admin', false);
+const zeca = new User("Lucas", "Admin", false);
 zeca.mostrarNome();
 console.log(zeca);
+class Car {
+    constructor(marca, rodas) {
+        this.marca = marca;
+        this.rodas = rodas;
+    }
+    mostrarMarca() {
+        console.info("A marca do carro é : " + this.marca);
+    }
+}
+const fusca = new Car("VW", 3);
+console.info(fusca);
+function controllerInsersao() {
+    return function (constructor) {
+        return class extends constructor {
+            constructor() {
+                super(...arguments);
+                this.id = Math.random();
+                this.createdAt = new Date();
+            }
+        };
+    };
+}
+let Pessoa = class Pessoa {
+    constructor(nome) {
+        this.nome = nome;
+    }
+};
+Pessoa = __decorate([
+    controllerInsersao()
+], Pessoa);
+const sam = new Pessoa("Samm");
+console.info(sam);
