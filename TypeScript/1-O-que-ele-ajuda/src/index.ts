@@ -39,6 +39,12 @@ const user: { name: string; age: number } = {
 };
 console.info(user);
 
+
+
+
+
+
+
 // TIPO ANY - tem a funcão dar qualquer tipo de dados ao qualquer variavel
 
 let qualquer: any = 0;
@@ -47,6 +53,11 @@ qualquer = true;
 qualquer = [];
 
 console.info(qualquer);
+
+
+
+
+
 
 // ********* UNION TYPE **********
 // Quando 2 ou mais tipos de variaveis
@@ -59,6 +70,14 @@ id = 200;
 
 console.info(id);
 
+
+
+
+
+
+
+
+
 // ******** ALIAS *********
 // Para selecionar o tipo separado e em seguida inserir o dados em varias variaveis
 type myIdType = number | string | string[];
@@ -69,6 +88,16 @@ const srirdId: myIdType = ["n33", "n44"];
 console.info("codProduto: ", userId);
 console.info("userID: ", produtoId);
 console.info("srId: ", srirdId);
+
+
+
+
+
+
+
+
+
+
 
 // ******* ENUM ***********
 // Como no Sql o enum server para enumera valores fixos
@@ -95,6 +124,12 @@ let teste: "autenticado" | null;
 
 teste = "autenticado";
 teste = null;
+
+
+
+
+
+
 
 // ******** FUNCTIONS **********//
 
@@ -137,6 +172,11 @@ greenting("Joao", "Sr");
 // Sem Opicional
 greenting("Joao");
 
+
+
+
+
+
 // ********* INTEFACE *********
 // Ela é padroniza algo para ser usado como tipo
 // Podendo reaproveitar os tipos existentes
@@ -175,6 +215,10 @@ function fazerChecagem(info: number | boolean) {
 
 fazerChecagem(true); // Posso usar com numero ou Boolean
 
+
+
+
+
 // Generics = Pode ser usado com qualquer coisa
 // Melhor que o ANY
 
@@ -192,6 +236,11 @@ const a2 = ["a", "b", "c"];
 
 showArrayItens(a1);
 showArrayItens(a2);
+
+
+
+
+
 
 /// ********* CLASS **********
 /// Adiciona os tipos
@@ -214,6 +263,13 @@ class User {
 const zeca = new User("Lucas", "Admin", false);
 zeca.mostrarNome();
 console.log(zeca);
+
+
+
+
+
+
+
 
 // ******* INTERFACES ********
 

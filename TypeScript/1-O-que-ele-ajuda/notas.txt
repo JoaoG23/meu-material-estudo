@@ -15,4 +15,10 @@ Ex:  "rootDir": "./src",
 tsc -w
 
 
+REACT COM TYPESCRIPT
+npx create-react-app view --template typescript 
 
+para usar o style components
+USAR COMO TYPESCRIPT Styled-components
+
+npm install --save @types/styled-components
