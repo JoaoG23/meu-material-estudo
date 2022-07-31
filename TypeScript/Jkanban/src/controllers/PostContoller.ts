@@ -12,6 +12,19 @@ class PostController {
       return res.json(error);
     }
   }
+  public async findForStatus(req: Request, res: Response): Promise<Response> {
+    
+    // let idStatus = req.params.status;
+    try {
+      const posts = await Post.find();
+      // const posts = await Post.findOne({status:idStatus});
+      console.log(posts);
+      // return res.json(posts);
+    } catch (error) {
+      console.error(error);
+      return res.json(error);
+    }
+  }
 
   public async create(req: Request, res: Response): Promise<Response> {
     try {

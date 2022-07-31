@@ -1,8 +1,10 @@
-import express from 'express';
-import cors from 'cors';
+import * as express from 'express';
+import * as cors from 'cors';
 import mongoose from 'mongoose';
 
 import routes from './routes';
+
+
 
 class App {
     public express: express.Application;
@@ -18,13 +20,13 @@ class App {
         this.express.use(express.json())
         this.express.use(cors())
     }
-
+    
     private database(): void{
         mongoose.connect('mongodb://localhost:27017/dbkanban',{
             // useNewUrlParser:true
         })
     }
-
+    
     private routes(): void {
         this.express.use(routes);
 
