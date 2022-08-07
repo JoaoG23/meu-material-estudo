@@ -36,8 +36,8 @@ function App() {
               <Aulas />
             </PrivateRoute>
           }></Route> */}
+            <Route path='/aulas/' element={<Aulas />}></Route>
           <Route path='/aulas/:id' element={<Aula />}></Route>
-            {/* <PrivateRoute path='/aulas/' element={<Aulas />}></PrivateRoute> */}
             <Route path='/assistir' element={<Assistir />}></Route>
             <Route path='*' element={<h2>Essa Rota não Existe</h2>}></Route>
 

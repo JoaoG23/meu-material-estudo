@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import Botao from './Botao';
 // type Repositories = {
 //     full_name:string;
 //     description:string;
@@ -37,7 +37,7 @@ const Body: React.FC = () => {
         };
 
         const dadosString = JSON.stringify(dadosInput);
-        console.info(dadosString);
+        // console.info(dadosString);
         const options = {
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
@@ -49,6 +49,7 @@ const Body: React.FC = () => {
         .then(
         (data) => {
           console.info(data);
+          setIsLoaded(true);
           setDados(data);
         },
         (error) => {
@@ -60,13 +61,13 @@ const Body: React.FC = () => {
   if (error) {
     return <div>Error: {error}</div>;
   } else if (isLoaded) {
-    return <div>Loading...</div>;
+    return <div> ...</div>;
   } else {
     return (
       <div>
         <input placeholder="Login" type='text' onChange={event => setLogin(event.target.value)}></input>
         <input placeholder="Senha" onChange={event => setSenha(event.target.value)} ></input>
-        <button onClick={() => buscar()}>Buscar</button>
+        <Botao onClick={() => buscar()}></Botao>
         <h2>{dados.msg}</h2>
       </div>
     );
