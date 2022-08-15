@@ -89,4 +89,45 @@ class PersonAccount extends UserAccount {
 const jonh = new PersonAccount('Jonh', 34, 'joabh', 34);
 jonh.setName('Amarilo');
 console.info(jonh.getName());
+const tlou = {
+    title: 'The Last of Us ',
+    description: 'The best game of years',
+    genre: 'Action',
+    plataform: ['PS3', 'PS4'],
+    getSimilars: (title) => {
+        console.log(`Similar Games to ${title}, Uncharted, play tales`);
+    }
+};
+const leftbehind = {
+    title: 'The last of Us - Left Behind',
+    description: 'To continues the legend of last game',
+    genre: 'Action',
+    plataform: ['PS3', 'PS4'],
+    originalGame: tlou,
+    newContent: ['3 hours story more', 'new characteres']
+};
+class CreateGame {
+    constructor(t, d, g) {
+        this.title = t;
+        this.description = d;
+        this.genre = g;
+    }
+}
+const $ = {
+    a: 'bla',
+    b: 'foo'
+};
+function useState() {
+    let state;
+    function getState() {
+        return state;
+    }
+    function setState(newState) {
+        state = newState;
+    }
+    return { getState, setState };
+}
+const newState = useState();
+newState.setState('sad');
+console.log(newState.getState());
 //# sourceMappingURL=index.js.map

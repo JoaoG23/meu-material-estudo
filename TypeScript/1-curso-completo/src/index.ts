@@ -187,7 +187,6 @@ class PersonAccount extends UserAccount {
     nickname:string;
     readonly level:number; // somente lida nao alterada..
 
-
     constructor(name:string, age:number , nickname:string, level:number) {
         super(name, age); // Para pegar as propriedades da class Progenitora
         this.nickname = nickname;
@@ -200,3 +199,184 @@ const jonh = new PersonAccount('Jonh', 34, 'joabh', 34);
 
 jonh.setName('Amarilo')
 console.info(jonh.getName())
+
+
+
+// INTERFACE 
+// O que é: 
+/*
+Diferente com Type alias onde pode ser passado varios tipos primitos
+a interface trabalha exclusivamente com objetos.
+*/ 
+
+
+
+interface Game {
+    title:string;
+    description:string;
+   readonly genre:string; // somente leitura
+    plataform?:string[];
+    getSimilars?:(title: string) => void;
+}
+
+const tlou:Game = {
+    title:'The Last of Us ',
+    description:'The best game of years',
+    genre:'Action',
+    plataform:['PS3','PS4'],
+    getSimilars:(title:string) => {
+        console.log(`Similar Games to ${title}, Uncharted, play tales`)
+    }
+}
+
+//tlou.genre = 'dsadsa' // Somente e leitura...
+
+// Criar extensoes outra interfaces com abaixo:
+interface DLC extends Game {
+    originalGame:Game // DLC teria um objeto do tipo Game com todas as infomacoes jogo original
+    newContent:string[];
+}
+
+const leftbehind: DLC = {
+    title:'The last of Us - Left Behind',
+    description:'To continues the legend of last game',
+    genre:'Action',
+    plataform:['PS3','PS4'],
+    originalGame:tlou,
+    newContent:['3 hours story more', 'new characteres']
+}
+
+// Implementando interface com classes
+class CreateGame implements Game {
+
+    title: string;
+    description:string;
+    genre:string;
+
+    constructor(t:string, d:string, g:string) {
+        this.title = t;
+        this.description = d;
+        this.genre = g;
+    }
+}
+
+
+// Diferencas dos Intefaces e Types Alias
+/**
+ * INTERFACES
+ * Vantagem: quando tiver criando libs prefira
+ * interfaces, por que são mais extensiveis
+ * 
+ * Criando objetos /Classes (POO)
+ */
+interface JQuery {
+    a:string;
+}
+interface JQuery {
+    b:string;
+}
+const $: JQuery = {
+    a:'bla',
+    b:'foo'
+}
+
+/**
+ * TYPES
+ * mais recomendado na maioria das vezes
+ * React - Props
+ */
+
+// Nao consegue passa com o mesmo nome.
+// Sendo mais consistente
+// type JQueryT = { a:string }
+// type JQueryT = { b:string }
+
+
+
+// GENERICS
+
+/**
+ * Serve para reutilizacao do
+ * codigo, para tornar os metodos
+ * mais genericos
+ *
+ * Aceitando diferentes tipos de 
+ * parametros.
+ */
+
+// Exemplo:
+// function useState() {
+//     let state: number | string;
+//     function getState() {
+//         return state;
+//     }
+//     function setState( newState: number | string ) {
+//         state = newState;
+//     }
+
+//     return { getState , setState }
+// }
+
+
+// // Generic
+// // Entra no momento em que depois de 
+// // definido o tipo ele nao possa mudar.
+// const newState = useState();
+
+// newState.setState('foo') // e uma string
+// console.log(newState.getState())
+// newState.setState(123); 
+// console.log(newState.getState()) // de error
+
+
+// S => State
+// T => Type
+// K => Key
+// V => Value
+// E => Element 
+
+// USANDO GENERICS
+// function useState<S>() {
+//     let state: S;
+//     function getState() { // S = unkown = igual ao any, porem quando o tipo e definido nao pode ser modificado...
+//         return state;
+//     }
+//     function setState( newState: S ) {
+//         state = newState;
+//     }
+
+//     return { getState , setState }
+// }
+
+// const newState = useState<string>(); // Definido jamais possa ser modificado
+
+// newState.setState('foo') // e uma string
+// console.log(newState.getState())
+// newState.setState(123); 
+// console.log(newState.getState()) 
+
+
+
+// USANDO GENERICS extenxivel
+
+// (=) pare definir o padrao
+
+type numOrStr = number | string; // usar o type alias
+
+function useState<S extends numOrStr = string>() {// por padrao ele seja string
+// function useState<S extends number | string = string>() {// por padrao ele seja string
+    let state: S;
+    function getState() { // S = unkown = igual ao any, porem quando o tipo e definido nao pode ser modificado...
+        return state;
+    }
+    function setState( newState: S ) {
+        state = newState;
+    }
+
+    return { getState , setState }
+}
+
+const newState = useState(); // Definido jamais possa ser modificado
+
+newState.setState('sad'); 
+console.log(newState.getState()) 
