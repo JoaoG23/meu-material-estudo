@@ -130,4 +130,24 @@ function useState() {
 const newState = useState();
 newState.setState('sad');
 console.log(newState.getState());
+const todo = {
+    title: 'Assistir Dark',
+    description: 'Relembrar os dados',
+    completed: false
+};
+console.info(todo);
+function updateTodo(todo, fieldsToUpdate) {
+    return Object.assign(Object.assign({}, todo), fieldsToUpdate);
+}
+const todo2 = updateTodo(todo, { completed: true });
+console.info(todo2);
+const todo3 = {
+    title: 'Joaoa',
+    description: 'Sisdnadda'
+};
+const todo4 = {
+    title: 'Joao',
+    completed: true
+};
+console.info(todo4);
 //# sourceMappingURL=index.js.map

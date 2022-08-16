@@ -380,3 +380,64 @@ const newState = useState(); // Definido jamais possa ser modificado
 
 newState.setState('sad'); 
 console.log(newState.getState()) 
+
+
+
+// 13. Type Utilities
+
+type Todo = { 
+    title:string;
+    description:string;
+    completed:boolean;
+}
+
+// Readonly
+const todo:Readonly<Todo> = { // Nao deixa mudar o elemento inicial
+    title:'Assistir Dark',
+    description:'Relembrar os dados',
+    completed:false
+}
+
+// Invès de altera diretamento o objeto 
+// Uma funcao que criar um novo objeto atualizado 
+
+// todo.completed = true; // errado X
+// Imutabilidade
+console.info(todo);
+
+
+function updateTodo(todo:Todo, fieldsToUpdate:Partial<Todo>) { // Certo 
+    return { ...todo, ...fieldsToUpdate }
+}
+/**
+ * PARTIAL
+ * é o todo ele deixa todas as
+ * propriedades em <T> opicionais.
+ * e ele garente que a s consistencia
+ * dos dados da interface ou type 
+ * permaneca
+ */
+
+const todo2: Todo = updateTodo(todo, { completed: true }); // Certo
+console.info(todo2);
+
+// PICK = Seleciona as algumas propriedade que o usuario
+// queira buscar dentro de um determinado objeto.
+
+type TodoPreview = Pick<Todo , 'title'|'description'>
+
+const todo3:TodoPreview = {
+    title:'Joaoa',
+    description:'Sisdnadda'
+};
+
+// OMIT = O inverso do PICK , tudo o que for passado
+// nos dentro dos <> Será omitido.
+
+type TodoPreview2 = Omit<Todo,  "description">
+const todo4:TodoPreview2 = {
+    title:'Joao',
+    completed:true
+}
+
+console.info(todo4);
