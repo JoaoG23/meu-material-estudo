@@ -29,13 +29,13 @@ function App() {
             <Route exact path='/' element={<Home />}></Route>
             <Route path='/sobre' element={<Sobre />}></Route>
 
-            {/* <Route
+            <Route
           path='/aulas'
           element={
             <PrivateRoute>
               <Aulas />
             </PrivateRoute>
-          }></Route> */}
+          }></Route>
             <Route path='/aulas/' element={<Aulas />}></Route>
           <Route path='/aulas/:id' element={<Aula />}></Route>
             <Route path='/assistir' element={<Assistir />}></Route>
