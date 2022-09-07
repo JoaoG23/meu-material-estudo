@@ -8,4 +8,6 @@ https://stackoverflow.com/questions/47408105/react-router-uncaught-syntaxerror-u
 
 ##### Corrigindo erro cannot GET /
 
+Retire a barra de / do script do js no index 
+
 https://ui.dev/react-router-cannot-get-url-refresh
